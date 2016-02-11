@@ -27,13 +27,6 @@ import java.util.Vector;
 
 public class SaveURL {
 
-	
-
-	/*@SuppressWarnings("unchecked")
-	public static Vector LinkExtract(URL path, int depth) {
-
-			}
-*/
 	public static void FileWriterToStorage(URL path) {
 		try {
 			URLConnection conn = null;
@@ -65,13 +58,7 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					try {
-						fs = new FileOutputStream("Storage/" + path.getHost()
-								+ "_" + path.toURI().getPath() + ".pdf");
-					} catch (URISyntaxException e) {
-						// TODO Auto-generated catch block
-
-					}
+					fs = new FileOutputStream("Storage/" + id+ ".pdf");
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -90,14 +77,8 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					try {
-						fs = new FileOutputStream("Storage/"
-								+ path.getAuthority() + "_"
-								+ path.toURI().getRawPath() + ".jpg");
-					} catch (URISyntaxException e) {
-						// TODO Auto-generated catch block
-
-					}
+					fs = new FileOutputStream("Storage/"
+							+id+ ".jpg");
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -117,13 +98,8 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					try {
-						fs = new FileOutputStream("Storage/"
-								+ path.toURI().getPath() + "_"
-								+ path.toURI().getRawAuthority() + ".html");
-					} catch (URISyntaxException e) {
-						// TODO Auto-generated catch block
-					}
+					fs = new FileOutputStream("Storage/"
+							+id + ".html");
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
