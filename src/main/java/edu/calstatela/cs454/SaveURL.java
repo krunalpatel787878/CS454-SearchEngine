@@ -10,16 +10,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.StringTokenizer;
 import java.util.UUID;
 import java.util.Vector;
+
+import org.codehaus.jackson.map.ObjectMapper;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 
 
@@ -29,6 +28,7 @@ public class SaveURL {
 
 	public static void FileWriterToStorage(URL path) {
 		try {
+			String a = null;
 			URLConnection conn = null;
 			try {
 				conn = path.openConnection();
@@ -58,7 +58,8 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					fs = new FileOutputStream("Storage/" + id+ ".pdf");
+					a="Storage/" + id+ ".pdf";
+					fs = new FileOutputStream(a);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -76,9 +77,10 @@ public class SaveURL {
 			}  else if (w.contains("jpg") || w.contains("jpeg")) {
 
 				FileOutputStream fs = null;
+				a="Storage/"
+						+id+ ".jpg";
 				try {
-					fs = new FileOutputStream("Storage/"
-							+id+ ".jpg");
+					fs = new FileOutputStream(a);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -95,11 +97,11 @@ public class SaveURL {
 				}
 			}
 			else  {
-
+				a= "Storage/"
+						+id + ".html";
 				FileOutputStream fs = null;
 				try {
-					fs = new FileOutputStream("Storage/"
-							+id + ".html");
+					fs = new FileOutputStream(a);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -114,11 +116,13 @@ public class SaveURL {
 					// TODO Auto-generated catch block
 
 				}
+				SaveURL.JsonWriter(path, a);
 			}
 
 		} catch (NullPointerException e) {
 
 		}
+		
 
 	}
 
@@ -149,6 +153,51 @@ public class SaveURL {
 		BufferedInputStream in = new BufferedInputStream(url.openStream());
 		for (int c = in.read(); c != -1; c = in.read()) {
 			writer.write(c);
+		}
+	}
+	
+	public static void JsonWriter(URL path,String storage){
+		JSONObject jsonObj = new JSONObject();
+
+		JSONArray jsonArray = new JSONArray();
+		jsonObj.put("storage", storage);
+		jsonObj.put("URL", path);
+		jsonArray.add(jsonObj);
+
+		File f = new File("Storage/file1.json");
+
+		BufferedWriter file = null;
+		try {
+			file = new BufferedWriter(
+					new FileWriter(f, true));
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			file.write(mapper.writerWithDefaultPrettyPrinter()
+					.writeValueAsString(jsonObj));
+			// System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
+
+			file.newLine();
+	
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		} finally {
+			try {
+				file.flush();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try {
+				file.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 
