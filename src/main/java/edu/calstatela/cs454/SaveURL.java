@@ -20,15 +20,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-
-
-
-
 public class SaveURL {
 
 	public static void FileWriterToStorage(URL path) {
 		try {
-			String a = null;
+			String filePath = null;
 			URLConnection conn = null;
 			try {
 				conn = path.openConnection();
@@ -43,7 +39,7 @@ public class SaveURL {
 				// TODO Auto-generated catch block
 
 			}
-			File dir = new File("Storage");
+			File dir = new File("target/Storage");
 			if (!dir.exists()) {
 				try {
 					dir.mkdir();
@@ -58,8 +54,8 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					a="Storage/" + id+ ".pdf";
-					fs = new FileOutputStream(a);
+					filePath = "target/Storage/" + id+ ".pdf";
+					fs = new FileOutputStream(filePath);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -77,10 +73,10 @@ public class SaveURL {
 			}  else if (w.contains("jpg") || w.contains("jpeg")) {
 
 				FileOutputStream fs = null;
-				a="Storage/"
+				filePath="target/Storage/"
 						+id+ ".jpg";
 				try {
-					fs = new FileOutputStream(a);
+					fs = new FileOutputStream(filePath);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -97,11 +93,11 @@ public class SaveURL {
 				}
 			}
 			else  {
-				a= "Storage/"
+				filePath = "target/Storage/"
 						+id + ".html";
 				FileOutputStream fs = null;
 				try {
-					fs = new FileOutputStream(a);
+					fs = new FileOutputStream(filePath);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
 
@@ -116,7 +112,7 @@ public class SaveURL {
 					// TODO Auto-generated catch block
 
 				}
-				SaveURL.JsonWriter(path, a);
+				SaveURL.JsonWriter(path, filePath);
 			}
 
 		} catch (NullPointerException e) {
@@ -164,7 +160,7 @@ public class SaveURL {
 		jsonObj.put("URL", path);
 		jsonArray.add(jsonObj);
 
-		File f = new File("Storage/file1.json");
+		File f = new File("target/Storage/file1.json");
 
 		BufferedWriter file = null;
 		try {
