@@ -23,7 +23,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/jackson-all-1.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/workspace/NavCam/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
