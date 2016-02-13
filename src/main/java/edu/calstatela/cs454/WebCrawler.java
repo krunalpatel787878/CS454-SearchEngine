@@ -32,10 +32,10 @@ public class WebCrawler implements MessageReceiver {
 
 	}
 
-	public void receiveMessage(Object o, int threadId) {
+	public void receiveMessage(Object o, int threadId, int level) {
 		// In our case, the object is already string, but that doesn't matter
 		URL path = (URL) o;		
-		SaveURL.FileWriterToStorage(path);		
+		SaveURL.FileWriterToStorage(path,level);		
 		System.out.println("[" + threadId + "] " + o.toString());
 	}
 
@@ -65,7 +65,7 @@ public class WebCrawler implements MessageReceiver {
 			IsExtractionEnable = true;
 		}
 		//String d = System.getProperty("d");
-		String pt = cl.getOptionValue("u"); /*"http://www.apple.com/"*/
+		String pt = cl.getOptionValue("u");
 		URL url = null;
 		try {
 			url = new URL(pt);

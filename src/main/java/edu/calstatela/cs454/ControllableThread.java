@@ -34,7 +34,7 @@ abstract public class ControllableThread extends Thread {
 			 newTask != null;
 			 newTask = queue.pop(level)) {
 			// Tell the message receiver what we're doing now
-			mr.receiveMessage(newTask, id);
+			mr.receiveMessage(newTask, id, level);
 			// Process the newTask
 			process(newTask);
 			// If there are less threads running than it could, try

@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DataDump {
 
@@ -19,6 +22,8 @@ public class DataDump {
 		}
 
 		String text = null;
+		
+		
 
 		while (true) {
 			try {

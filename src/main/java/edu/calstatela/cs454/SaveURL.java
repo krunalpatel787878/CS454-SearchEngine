@@ -12,6 +12,9 @@ import java.io.StringWriter;
 import java.io.Writer;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.StringTokenizer;
 import java.util.UUID;
 import java.util.Vector;
@@ -21,8 +24,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class SaveURL {
-
-	public static void FileWriterToStorage(URL path) {
+	static DateFormat df = new SimpleDateFormat("mm");
+	static Date dateobj = new Date();
+	// int StartMinute = Integer.parseInt(df.format(dateobj));
+	static int EndMinute = Integer.parseInt(df.format(dateobj)) + 1;
+	public static void FileWriterToStorage(URL path, int level) {
 		try {
 			String filePath = null;
 			URLConnection conn = null;
@@ -54,7 +60,7 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					filePath = "Storage/" + id+ ".pdf";
+					filePath = "Storage/" + id + ".pdf";
 					fs = new FileOutputStream(filePath);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -70,11 +76,10 @@ public class SaveURL {
 					// TODO Auto-generated catch block
 
 				}
-			}  else if (w.contains("jpg") || w.contains("jpeg")) {
+			} else if (w.contains("jpg") || w.contains("jpeg")) {
 
 				FileOutputStream fs = null;
-				filePath="Storage/"
-						+id+ ".jpg";
+				filePath = "Storage/" + id + ".jpg";
 				try {
 					fs = new FileOutputStream(filePath);
 				} catch (FileNotFoundException e) {
@@ -91,10 +96,8 @@ public class SaveURL {
 					// TODO Auto-generated catch block
 
 				}
-			}
-			else  {
-				filePath = "Storage/"
-						+id + ".html";
+			} else {
+				filePath = "Storage/" + id + ".html";
 				FileOutputStream fs = null;
 				try {
 					fs = new FileOutputStream(filePath);
@@ -112,29 +115,36 @@ public class SaveURL {
 					// TODO Auto-generated catch block
 
 				}
-				SaveURL.JsonWriter(path, filePath);
+				SaveURL.JsonWriter(path, filePath, level);
 			}
 
 		} catch (NullPointerException e) {
 
 		}
-		
 
 	}
 
 	public static Vector extractLinks(String rawPage, String page) {
 		int index = 0;
 		Vector links = new Vector();
+		
+
 		while ((index = page.indexOf("<a ", index)) != -1) {
-			if ((index = page.indexOf("href", index)) == -1)
+			Date dateobjnew = new Date();
+			/*if (EndMinute - Integer.parseInt(df.format(dateobjnew)) > 0) {*/
+				if ((index = page.indexOf("href", index)) == -1)
+					break;
+				if ((index = page.indexOf("=", index)) == -1)
+					break;
+				String remaining = rawPage.substring(++index);
+				StringTokenizer st = new StringTokenizer(remaining,
+						"\t\n\r\"'>#");
+				String strLink = st.nextToken();
+				if (!links.contains(strLink))
+					links.add(strLink);
+			/*} else {
 				break;
-			if ((index = page.indexOf("=", index)) == -1)
-				break;
-			String remaining = rawPage.substring(++index);
-			StringTokenizer st = new StringTokenizer(remaining, "\t\n\r\"'>#");
-			String strLink = st.nextToken();
-			if (!links.contains(strLink))
-				links.add(strLink);
+			}*/
 		}
 		return links;
 	}
@@ -151,21 +161,21 @@ public class SaveURL {
 			writer.write(c);
 		}
 	}
-	
-	public static void JsonWriter(URL path,String storage){
+
+	public static void JsonWriter(URL path, String storage, int level) {
 		JSONObject jsonObj = new JSONObject();
 
 		JSONArray jsonArray = new JSONArray();
 		jsonObj.put("storage", storage);
 		jsonObj.put("URL", path);
+		jsonObj.put("Level", level);
 		jsonArray.add(jsonObj);
 
 		File f = new File("Storage/file1.json");
 
 		BufferedWriter file = null;
 		try {
-			file = new BufferedWriter(
-					new FileWriter(f, true));
+			file = new BufferedWriter(new FileWriter(f, true));
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -177,7 +187,7 @@ public class SaveURL {
 			// System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
 
 			file.newLine();
-	
+
 		} catch (IOException e) {
 			e.printStackTrace();
 
