@@ -1,5 +1,6 @@
 package edu.calstatela.cs454;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -8,7 +9,11 @@ import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import edu.calstatela.Extraction.URLExtraction;
+
 public class WebCrawler implements MessageReceiver {
+	static boolean IsExtractionEnable = false;
+	
 	public WebCrawler(Queue q, int maxLevel, int maxThreads)
 			throws InstantiationException, IllegalAccessException {
 			ThreadController tc = new ThreadController(WebCrawlerThread.class,
@@ -20,6 +25,11 @@ public class WebCrawler implements MessageReceiver {
 		}
 	public void finishedAll() {
 		// ignore
+		if(IsExtractionEnable){
+			final File folder = new File("Storage");
+			URLExtraction.listFilesForFolder(folder);
+			}
+
 	}
 
 	public void receiveMessage(Object o, int threadId) {
@@ -40,6 +50,7 @@ public class WebCrawler implements MessageReceiver {
 		options.addOption("d", true, "depth");
 		options.addOption("u", true, "url");
 		options.addOption("t", true, "thread");
+		options.addOption("e", false, "Extraction");
 		CommandLine cl = null;
 		 
 		BasicParser parser = new BasicParser();
@@ -50,6 +61,9 @@ public class WebCrawler implements MessageReceiver {
 			e2.printStackTrace();
 		}
 		
+		if(cl.hasOption("e")){
+			IsExtractionEnable = true;
+		}
 		//String d = System.getProperty("d");
 		String pt = cl.getOptionValue("u"); /*"http://www.apple.com/"*/
 		URL url = null;

@@ -61,26 +61,20 @@ public class URLExtraction {
 	            	 file2.write(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
 	            	 
 	            	 file2.newLine();
-	            	 System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
+	            	// System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
 	             
 	             
 	            }
 	            catch (Exception e) {
 	                e.printStackTrace();
 	            }finally{
+	            	
 	            	file2.flush();
 	            	file2.close();
 	            }
 	              
 		 }
 		 catch(Exception e){}
-	}
+	}	
 	
-		
-	public static void main(String[] args) {
-		final File folder = new File("Storage");
-		 listFilesForFolder(folder);
-	//	 System.out.println(filename);
-		 
-	}
 }
