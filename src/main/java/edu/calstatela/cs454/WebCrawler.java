@@ -51,7 +51,7 @@ public class WebCrawler implements MessageReceiver {
 		}
 		
 		//String d = System.getProperty("d");
-		String pt = cl.getOptionValue("u"); /*"http://www.apple.com/";*/
+		String pt = cl.getOptionValue("u"); /*"http://www.apple.com/"*/
 		URL url = null;
 		try {
 			url = new URL(pt);
@@ -64,6 +64,7 @@ public class WebCrawler implements MessageReceiver {
 		} catch (MalformedURLException e1) {			
 		}
 		try {
+			//new WebCrawler(q, 1, 10);
 			new WebCrawler(q, Integer.parseInt(cl.getOptionValue("d")), Integer.parseInt(cl.getOptionValue("t")));
 		} catch (InstantiationException e) {
 			

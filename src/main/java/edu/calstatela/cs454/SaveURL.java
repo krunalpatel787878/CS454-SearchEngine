@@ -39,7 +39,7 @@ public class SaveURL {
 				// TODO Auto-generated catch block
 
 			}
-			File dir = new File("/target/Storage");
+			File dir = new File("Storage");
 			if (!dir.exists()) {
 				try {
 					dir.mkdir();
@@ -54,7 +54,7 @@ public class SaveURL {
 
 				FileOutputStream fs = null;
 				try {
-					filePath = "target/Storage/" + id+ ".pdf";
+					filePath = "Storage/" + id+ ".pdf";
 					fs = new FileOutputStream(filePath);
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -73,7 +73,7 @@ public class SaveURL {
 			}  else if (w.contains("jpg") || w.contains("jpeg")) {
 
 				FileOutputStream fs = null;
-				filePath="target/Storage/"
+				filePath="Storage/"
 						+id+ ".jpg";
 				try {
 					fs = new FileOutputStream(filePath);
@@ -93,7 +93,7 @@ public class SaveURL {
 				}
 			}
 			else  {
-				filePath = "/target/Storage/"
+				filePath = "Storage/"
 						+id + ".html";
 				FileOutputStream fs = null;
 				try {
@@ -160,7 +160,7 @@ public class SaveURL {
 		jsonObj.put("URL", path);
 		jsonArray.add(jsonObj);
 
-		File f = new File("/target/Storage/file1.json");
+		File f = new File("Storage/file1.json");
 
 		BufferedWriter file = null;
 		try {
