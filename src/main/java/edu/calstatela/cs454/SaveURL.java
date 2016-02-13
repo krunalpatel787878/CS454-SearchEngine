@@ -39,7 +39,7 @@ public class SaveURL {
 				// TODO Auto-generated catch block
 
 			}
-			File dir = new File("target/Storage");
+			File dir = new File("/target/Storage");
 			if (!dir.exists()) {
 				try {
 					dir.mkdir();
@@ -93,7 +93,7 @@ public class SaveURL {
 				}
 			}
 			else  {
-				filePath = "target/Storage/"
+				filePath = "/target/Storage/"
 						+id + ".html";
 				FileOutputStream fs = null;
 				try {
@@ -160,7 +160,7 @@ public class SaveURL {
 		jsonObj.put("URL", path);
 		jsonArray.add(jsonObj);
 
-		File f = new File("target/Storage/file1.json");
+		File f = new File("/target/Storage/file1.json");
 
 		BufferedWriter file = null;
 		try {
