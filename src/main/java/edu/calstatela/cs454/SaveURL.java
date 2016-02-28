@@ -131,7 +131,7 @@ public class SaveURL {
 
 		while ((index = page.indexOf("<a ", index)) != -1) {
 			Date dateobjnew = new Date();
-			/*if (EndMinute - Integer.parseInt(df.format(dateobjnew)) > 0) {*/
+			if (EndMinute - Integer.parseInt(df.format(dateobjnew)) > 0) {
 				if ((index = page.indexOf("href", index)) == -1)
 					break;
 				if ((index = page.indexOf("=", index)) == -1)
@@ -142,9 +142,9 @@ public class SaveURL {
 				String strLink = st.nextToken();
 				if (!links.contains(strLink))
 					links.add(strLink);
-			/*} else {
+			} else {
 				break;
-			}*/
+			}
 		}
 		return links;
 	}

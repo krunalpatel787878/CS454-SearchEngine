@@ -13,4 +13,5 @@ public interface Queue {
 	public Object pop(int level);
 	public boolean push(Object task, int level);
 	public void clear();
+	
 }
