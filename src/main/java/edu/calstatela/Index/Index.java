@@ -35,8 +35,7 @@ public static void index(String c, String stw, String index, String rank) throws
 		/* File f = new File("D:/Storage"); // current directory
 
 		   File[] files = f.listFiles();
-		    for (File file : files) {*/
-			ArrayList<String> ranking = new ArrayList<String>();
+		    for (File file : files) {*/			ArrayList<String> ranking = new ArrayList<String>();
 			final InputStream in = new FileInputStream(c);
 			 
 			try {

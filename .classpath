@@ -23,9 +23,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/jackson-all-1.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/commons-cli-2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/tika-app-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/workspace/NavCam/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/commons-cli-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/tika-app-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/lucene-core-3.0.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

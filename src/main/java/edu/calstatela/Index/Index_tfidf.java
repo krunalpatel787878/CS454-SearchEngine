@@ -1,27 +1,37 @@
 package edu.calstatela.Index;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Vector;
 
+import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.html.HtmlParser;
 import org.apache.tika.sax.BodyContentHandler;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.xml.sax.ContentHandler;
+import org.xml.sax.SAXException;
 
 public class Index_tfidf {
 	public static HashMap<String, Double> TermFrequencyWholeCorpus = new HashMap<String, Double>();
 	public static HashMap<String, HashMap<Integer, Double>> TermFrequencyDocWise = new HashMap<String, HashMap<Integer, Double>>();
 	public static Vector<String> docs=new Vector<String>();
+	public static Vector<String> docsWithUrl=new Vector<String>();
 	public static Vector<String> termsList = new Vector<String>();
 
 	public static double[][] matrix;
@@ -107,6 +117,7 @@ public class Index_tfidf {
 		for(File filePath: files){
 		String fileContent = readOneFile(filePath);
 		docs.add(fileContent);
+		docsWithUrl.add(filePath.getName());
 		}
 
 		}catch(Exception e){
@@ -208,7 +219,8 @@ public class Index_tfidf {
 			  public static HashMap<Integer, Double> docScores = new HashMap<Integer, Double>();
 			  public static HashMap<Integer, HashMap<String, Double>> DocWiseTermFrequency = new HashMap<Integer, HashMap<String, Double>>();
 
-			  public static void computeTF2(){
+			  @SuppressWarnings("unchecked")
+			public static void computeTF2() throws IOException, SAXException, TikaException{
 
 			  for(int i=0;i<docs.size();i++){
 			  String page=docs.get(i).toLowerCase();
@@ -240,16 +252,61 @@ public class Index_tfidf {
 
 			  }
 			  }
-			  System.out.println(TermFrequencyWholeCorpus);
+			  JSONObject obj = new JSONObject();
+			  Iterator it =DocWiseTermFrequency.entrySet().iterator();
+			
+			  
+			  File f2 = new File("f1.json");
+	          BufferedWriter file2 = null;
+			try {
+				file2 = new BufferedWriter(new FileWriter(f2,true));
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} 
+	            try {
+	            	  while (it.hasNext()) {
+
+	    				  Map.Entry m = (Map.Entry)it.next();
+	            		  
+	            		  
+	            		  BodyContentHandler handler = new BodyContentHandler();
+	        		      Metadata metadata = new Metadata();
+	        		      FileInputStream inputstream = new FileInputStream( "C:/Users/Ami/CS454_workspace/CS454-SearchEngine/testing/"+docsWithUrl.get((int)m.getKey()));
+	        		      ParseContext pcontext = new ParseContext();
+	        		      AutoDetectParser  msofficeparser = new AutoDetectParser(); 
+	        		      msofficeparser.parse(inputstream, handler, metadata,pcontext);
+	            		  
+	            		  
+	    				  obj.put("a", metadata.get("og:url"));
+	    				  obj.put("link", docsWithUrl.get((int)m.getKey()));
+	    				  obj.put("words", m.getValue());
+	    			// System.out.println(m.getKey()+"-"+m.getValue());
+	    			  
+	            	ObjectMapper mapper = new ObjectMapper();
+	               file2.write(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
+	          System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
+	                file2.newLine();
+	            	  }
+	            } catch (IOException e) {
+	                e.printStackTrace();
+	     
+	            } finally {
+	                file2.flush();
+	                file2.close();
+	            }
+			  
+			  
+			 /* System.out.println(TermFrequencyWholeCorpus);
 			  System.out.println(TermFrequencyDocWise);
-			  System.out.println(DocWiseTermFrequency);
+			  System.out.println(DocWiseTermFrequency);*/
 			  }
 			  
-			    public static void main(String[] args){
-			    	readDocs("D:/CS454_Workspace_Github/CS454-SearchEngine/testing");
-			    	computeFrequency();
-			    	computeMatrix();
-			    	printMatrix();
+			    public static void main(String[] args) throws IOException, SAXException, TikaException{
+			    	readDocs("C:/Users/Ami/CS454_workspace/CS454-SearchEngine/testing");
+			    	//computeFrequency();
+			    	/*computeMatrix();
+			    	printMatrix();*/
 			    	computeTF2();
 			    }
 	
