@@ -3,6 +3,7 @@ package edu.calstatela.Index;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +24,8 @@ public class Ranking {
 	private HashMap<String, ShowDataBean> records = new HashMap<String, ShowDataBean>();
 	private JSONArray mainArr = new JSONArray();
 	private JSONObject jsonObj = new JSONObject();
+	
+	
 
 	public void startRank(String filePath) throws FileNotFoundException,
 			IOException, ParseException {
@@ -95,7 +98,16 @@ public class Ranking {
 		Ranking();
 
 	}
-
+	
+	public void saveArray() throws IOException {
+		FileWriter file = new FileWriter(".\\ranking.json", false);
+	
+		file.write(jsonObj.toJSONString());
+		file.write("\r\n");
+		file.flush();
+		file.close();
+	}
+	
 	public void Ranking() throws IOException {
 
 		double defaultRank = 1.0 / numOfLinks;
@@ -141,7 +153,115 @@ public class Ranking {
 		}
 
 	
+		beginRanking();
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public void beginRanking() throws IOException {
+		
+		double defaultRank = 1.0 / numOfLinks;
+		
+
+		for (ShowDataBean link : allLinks) {
+			link.setRank(defaultRank);
+			link.setNewRank(defaultRank);
+			outgoingCount.put(link.getUrl(), link.getGoingOut().size());
+		}
+
+		double rank;
+		double tempRank;
+		ShowDataBean holder;
+		for (int i = 0; i < 10; i++) {
+		
+			for (String url : records.keySet()) {
+				holder = records.get(url);
+				rank = 0;
+				for (String incoming : holder.getIncoming()) {
+					if (records.containsKey(incoming)) {
+						tempRank = records.get(incoming).getRank();
+						if (outgoingCount.containsKey(incoming))
+							if (outgoingCount.get(incoming) > 0)
+								tempRank = tempRank
+										/ outgoingCount.get(incoming);
+						rank = rank + tempRank;
+					} else {
+						rank = rank + defaultRank;
+					}
+				}
+				if (rank == 0.0)
+					rank = defaultRank;
+
+				holder.setNewRank(rank);
+				holder.setFinalRank2();
+			}
+			for (ShowDataBean link : allLinks) {
+				link.copyRank();
+			}
+		}
+
+		for (ShowDataBean link : allLinks) {
+			link.setFinalRank2();
+			link.round();
+			link.createJSON();
+			jsonObj.put(link.getId(), link.getJson());
+			mainArr.add(link.getJson());
+		}
+		saveArray();
 
 	}
+	
+
+	public void LastRanking() throws IOException {
+		System.out.println("Number of Links" + numOfLinks);
+		double defaultRank = 1.0 / numOfLinks;
+		System.out.println("Default Rank " + defaultRank);
+
+		for (ShowDataBean link : allLinks) {
+			link.setRank(defaultRank);
+			link.setNewRank(defaultRank);
+		}
+
+		double rank;
+		double tempRank;
+		ShowDataBean holder;
+		for (int i = 0; i < 10; i++) {
+			// System.out.println("Iteration number : "+i);
+			for (String url : records.keySet()) {
+				holder = records.get(url);
+				rank = 0;
+				for (String goingOut : holder.getGoingOut()) {
+					if (records.containsKey(goingOut)) {
+						tempRank = records.get(goingOut).getRank();
+						if (incomingCount.containsKey(goingOut))
+							if (incomingCount.get(goingOut) > 0)
+								tempRank = tempRank
+										/ incomingCount.get(goingOut);
+						rank = rank + tempRank;
+					} else {
+						rank = rank + defaultRank;
+					}
+				}
+				if (rank == 0.0)
+					rank = defaultRank;
+
+				// System.out.println("Rank : "+rank);
+
+				holder.setNewRank(rank);
+				holder.setFinalRank1();
+			}
+			for (ShowDataBean link : allLinks) {
+				link.copyRank();
+			}
+		}
+		
+		for (ShowDataBean link : allLinks) {
+			link.getFinalRank1();
+		}
+		
+		beginRanking();
+
+	}
+
 
 }
