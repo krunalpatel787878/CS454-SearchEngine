@@ -41,7 +41,7 @@ public class SearchServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		List<String> c = new ArrayList<String>();
-		String file = "D:\\CS454_Workspace_Github\\CS454-SearchEngine\\MyFile.txt";
+		String file = "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt";
 		BufferedReader buf = null;
 		try {
 			buf = new BufferedReader(new FileReader(file));
@@ -105,17 +105,50 @@ String q = request.getParameter("search");
 		List<ShowSearchResultBean> r = null;
 		if (token == null) {
 			System.out.println(query);
-			//r = SearchMain.sortUsingRelevance(query);
+			try {
+				r = SearchMain.sortUsingRelevance(query);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SAXException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (TikaException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} else {
 			System.out.println(token[0] + "" + token[1]);
 			if (operators.equals("AND") || operators.equals("and") || operators.equals("And")) {
-				//	r = SearchMain.searchByBoolean(token[0].trim(),token[1].trim(),"1");
+				try {
+					r = SearchMain.searchByBoolean(token[0].trim(),token[1].trim(),"1");
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SAXException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (TikaException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			} else {
-				//r = SearchMain.searchByBoolean(token[0].trim(), token[1].trim(), "0");
+				try {
+					r = SearchMain.searchByBoolean(token[0].trim(), token[1].trim(), "0");
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (SAXException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (TikaException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 		List<String> c = new ArrayList<String>();
-		String file = "D:\\CS454_Workspace_Github\\CS454-SearchEngine\\MyFile.txt";
+		String file = "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt";
 		BufferedReader buf = null;
 		try {
 			buf = new BufferedReader(new FileReader(file));

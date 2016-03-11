@@ -68,6 +68,8 @@ public class Indexer {
 			if (!file.isDirectory() && !file.isHidden() && file.exists()
 					&& file.canRead() && filter.accept(file)) {
 				indexFile(file);
+			}else{
+				createIndex(file.toString(), new TextFileFilter());
 			}
 		}
 		return writer.numDocs();

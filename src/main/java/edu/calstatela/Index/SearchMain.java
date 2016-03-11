@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.Term;
@@ -48,161 +50,191 @@ public class SearchMain {
 		      }		
 		   }
 	   
-	   @SuppressWarnings("unused")
-	private void searchByBoolean(String searchQuery1,
-			      String searchQuery2)throws IOException, ParseException, SAXException, TikaException{
-			      searchLink = new Search(IndexConstants.indexDir);
-			      long startTime = System.currentTimeMillis();
-			      //create a term to search file name
-			      Term term1 = new Term(IndexConstants.CONTENTS, searchQuery1);
-			      //create the term query object
-			      Query query1 = new TermQuery(term1);
+		@SuppressWarnings("unused")
+		public static List<ShowSearchResultBean> searchByBoolean(String searchQuery1,
+				String searchQuery2,String value) throws IOException,
+				ParseException, SAXException, TikaException {
+			List<ShowSearchResultBean> result = new ArrayList<>();
 
-			      Term term2 = new Term(IndexConstants.CONTENTS, searchQuery2);
-			      //create the term query object
-			      Query query2 = new PrefixQuery(term2);
+			searchLink = new Search(IndexConstants.indexDir);
+			long startTime = System.currentTimeMillis();
+			// create a term to search file name
+			Term term1 = new Term(IndexConstants.CONTENTS, searchQuery1);
+			// create the term query object
+			Query query1 = new TermQuery(term1);
 
-			      BooleanQuery query = new BooleanQuery();
-			      query.add(query1,BooleanClause.Occur.MUST);
-			      query.add(query2,BooleanClause.Occur.SHOULD);
+			Term term2 = new Term(IndexConstants.CONTENTS, searchQuery2);
+			// create the term query object
+			Query query2 = new PrefixQuery(term2);
 
-			      //do the search
-			      TopDocs hits = searchLink.search(query);
-			      long endTime = System.currentTimeMillis();
+			BooleanQuery query = new BooleanQuery();
+			if (value == "1") {
+				query.add(query1, BooleanClause.Occur.MUST);
+				query.add(query2, BooleanClause.Occur.MUST);
+			} else {
+				query.add(query1, BooleanClause.Occur.SHOULD);
+				query.add(query2, BooleanClause.Occur.SHOULD);
+			}
+			
+			// do the search
+			TopDocs hits = searchLink.search(query);
+			long endTime = System.currentTimeMillis();
 
-			      System.out.println(hits.totalHits +
-			            " documents found. Time :" + (endTime - startTime) + "ms");
-			      for(ScoreDoc scoreDoc : hits.scoreDocs) {
-			         Document doc = searchLink.getDocument(scoreDoc);
-			         
-			         //
-			         
-			         File file = new File(doc.get(IndexConstants.FILE_PATH));
-		              
-			            InputStream input = new FileInputStream(file);           
-			           // System.out.println( file.getPath());                
-			             
-			            Metadata metadata = new Metadata();
-			             
-			            BodyContentHandler handler = new BodyContentHandler(10*1024*1024);
-			            AutoDetectParser parser = new AutoDetectParser();       
-			     
-			            parser.parse(input, handler, metadata);
-			         
-			         
-			         //
-			            if(metadata.get("og:url")!=null){
-			            System.out.print("Score: "+ scoreDoc.score + " ");
-			         System.out.println("File: "+ metadata.get("og:url"));
-			            }
-			      }
-			      searchLink.close();
-			   }
+			System.out.println(hits.totalHits + " documents found. Time :"
+					+ (endTime - startTime) + "ms");
+			for (ScoreDoc scoreDoc : hits.scoreDocs) {
+				Document doc = searchLink.getDocument(scoreDoc);
 
-	   private static void search(String searchQuery) throws IOException, ParseException, SAXException, TikaException{
-		   searchLink = new Search(IndexConstants.indexDir);
-		      long startTime = System.currentTimeMillis();
-		      TopDocs hits = searchLink.search(searchQuery);
-		      long endTime = System.currentTimeMillis();
+				//
 
-		      System.out.println(hits.totalHits +
-		         " documents found. Time :" + (endTime - startTime) +" ms");
-		      for(ScoreDoc scoreDoc : hits.scoreDocs) {
-		         Document doc = searchLink.getDocument(scoreDoc);
-		         File file = new File(doc.get(IndexConstants.FILE_PATH));
-	              
-		         InputStream input = new FileInputStream(file);           
-		           // System.out.println( file.getPath());                
-		             
-		            Metadata metadata = new Metadata();
-		             
-		            BodyContentHandler handler = new BodyContentHandler(10*1024*1024);
-		            AutoDetectParser parser = new AutoDetectParser();       
-		     
-		            parser.parse(input, handler, metadata);
-		         
-		         
-		        
-		            if(metadata.get("og:url")!=null){
-		            System.out.print("Score: "+ scoreDoc.score + " ");
-		         System.out.println("File: "+ metadata.get("og:url"));
-		            }
-		         
-		       /*  System.out.print("Score: "+ scoreDoc.score + " ");
-		         System.out.println("File: "+ doc.get(IndexConstants.FILE_PATH));
-		         */
-		      }
-		      searchLink.close();
-		   }	
-	   @SuppressWarnings("unused")
-	private void sortUsingRelevance(String searchQuery) throws IOException, ParseException, SAXException, TikaException{
-		   searchLink = new Search(IndexConstants.indexDir);
-	      long startTime = System.currentTimeMillis();
-	      //create a term to search file name
-	      Term term = new Term(IndexConstants.CONTENTS, searchQuery);
-	      //create the term query object
-	      Query query = new FuzzyQuery(term);
-	      searchLink.setSortScoring(true, false);
-	      //do the search
-	      TopDocs hits = searchLink.search(query,Sort.RELEVANCE);
-	      long endTime = System.currentTimeMillis();
+				File file = new File(doc.get(IndexConstants.FILE_PATH));
 
-	      System.out.println(hits.totalHits +
-	         " documents found. Time :" + (endTime - startTime) + "ms");
-	      for(ScoreDoc scoreDoc : hits.scoreDocs) {
-	         Document doc = searchLink.getDocument(scoreDoc);
-	         
-	       /*  File file = new File(doc.get(IndexConstants.FILE_PATH));
-          
-	         InputStream input = new FileInputStream(file);           
-	           // System.out.println( file.getPath());                
-	             
-	            Metadata metadata = new Metadata();
-	             
-	            BodyContentHandler handler = new BodyContentHandler(10*1024*1024);
-	            AutoDetectParser parser = new AutoDetectParser();       
-	     
-	            parser.parse(input, handler, metadata);
-	         
-	         
-	        
-	            if(metadata.get("og:url")!=null){
-	            System.out.print("Score: "+ scoreDoc.score + " ");
-	         System.out.println("File: "+ metadata.get("og:url"));
-	            }
-	         */
-	         
-	         
-	         System.out.print("Score: "+ scoreDoc.score + " ");
-	         System.out.println("File: "+ doc.get(IndexConstants.FILE_PATH));
-	      }
-	      searchLink.close();
-	   }
+				InputStream input = new FileInputStream(file);
+				// System.out.println( file.getPath());
 
-	   @SuppressWarnings("unused")
-	private void sortUsingIndex(String searchQuery)
-	      throws IOException, ParseException{
-		   searchLink = new Search(IndexConstants.indexDir);
-	      long startTime = System.currentTimeMillis();
-	      //create a term to search file name
-	      Term term = new Term(IndexConstants.CONTENTS, searchQuery);
-	      //create the term query object
-	      Query query = new FuzzyQuery(term);
-	      searchLink.setSortScoring(true, false);
-	      //do the search
-	      TopDocs hits = searchLink.search(query,Sort.INDEXORDER);
-	      long endTime = System.currentTimeMillis();
+				Metadata metadata = new Metadata();
 
-	      System.out.println(hits.totalHits +
-	      " documents found. Time :" + (endTime - startTime) + "ms");
-	      for(ScoreDoc scoreDoc : hits.scoreDocs) {
-	         Document doc = searchLink.getDocument(scoreDoc);
-	         System.out.print("Score: "+ scoreDoc.score + " ");
-	         System.out.println("File: "+ doc.get(IndexConstants.FILE_PATH));
-	      }
-	      searchLink.close();
-	   }
-	
-	
-	
+				BodyContentHandler handler = new BodyContentHandler(
+						10 * 1024 * 1024);
+				AutoDetectParser parser = new AutoDetectParser();
+
+				parser.parse(input, handler, metadata);
+
+				//
+				if (metadata.get("og:url") != null) {
+					/*
+					 * System.out.print("Score: "+ scoreDoc.score + " ");
+					 * System.out.println("File: "+ metadata.get("og:url"));
+					 */
+					ShowSearchResultBean a = new ShowSearchResultBean(
+							scoreDoc.score, metadata.get("og:url"));
+					result.add(a);
+
+				}
+			}
+
+			searchLink.close();
+			return result;
+		}
+
+		static List<ShowSearchResultBean> search(String searchQuery)
+				throws IOException, ParseException, SAXException, TikaException {
+			List<ShowSearchResultBean> result = new ArrayList<>();
+			searchLink = new Search(IndexConstants.indexDir);
+			long startTime = System.currentTimeMillis();
+			TopDocs hits = searchLink.search(searchQuery);
+			long endTime = System.currentTimeMillis();
+
+			System.out.println(hits.totalHits + " documents found. Time :"
+					+ (endTime - startTime) + " ms");
+			for (ScoreDoc scoreDoc : hits.scoreDocs) {
+				Document doc = searchLink.getDocument(scoreDoc);
+				File file = new File(doc.get(IndexConstants.FILE_PATH));
+
+				InputStream input = new FileInputStream(file);
+				// System.out.println( file.getPath());
+
+				Metadata metadata = new Metadata();
+
+				BodyContentHandler handler = new BodyContentHandler(
+						10 * 1024 * 1024);
+				AutoDetectParser parser = new AutoDetectParser();
+
+				parser.parse(input, handler, metadata);
+
+				if (metadata.get("og:url") != null) {
+					/*
+					 * System.out.print("Score: "+ scoreDoc.score + " ");
+					 * System.out.println("File: "+ metadata.get("og:url"));
+					 */
+					ShowSearchResultBean a = new ShowSearchResultBean(
+							scoreDoc.score, metadata.get("og:url"));
+					result.add(a);
+				}
+
+				/*
+				 * System.out.print("Score: "+ scoreDoc.score + " ");
+				 * System.out.println("File: "+ doc.get(IndexConstants.FILE_PATH));
+				 */
+			}
+			searchLink.close();
+			return result;
+		}
+
+		@SuppressWarnings("unused")
+		public static List<ShowSearchResultBean> sortUsingRelevance(String searchQuery) throws IOException,
+				ParseException, SAXException, TikaException {
+			List<ShowSearchResultBean> result = new ArrayList<>();
+			searchLink = new Search(IndexConstants.indexDir);
+			long startTime = System.currentTimeMillis();
+			// create a term to search file name
+			Term term = new Term(IndexConstants.CONTENTS, searchQuery);
+			// create the term query object
+			Query query = new FuzzyQuery(term);
+			searchLink.setSortScoring(true, false);
+			// do the search
+			TopDocs hits = searchLink.search(query, Sort.RELEVANCE);
+			long endTime = System.currentTimeMillis();
+
+			System.out.println(hits.totalHits + " documents found. Time :"
+					+ (endTime - startTime) + "ms");
+			for (ScoreDoc scoreDoc : hits.scoreDocs) {
+				Document doc = searchLink.getDocument(scoreDoc);
+
+				
+				  File file = new File(doc.get(IndexConstants.FILE_PATH));
+				  
+				  InputStream input = new FileInputStream(file); //
+				 System.out.println( file.getPath());
+			 
+				  Metadata metadata = new Metadata();
+				  
+				  BodyContentHandler handler = new
+				  BodyContentHandler(10*1024*1024); AutoDetectParser parser = new
+				  AutoDetectParser();
+				  
+				  parser.parse(input, handler, metadata);
+				  
+				  
+				  
+				  if(metadata.get("og:url")!=null){ 
+					  /*System.out.print("Score: "+
+				  scoreDoc.score + " "); System.out.println("File: "+
+				  metadata.get("og:url"));*/
+					  ShowSearchResultBean a = new ShowSearchResultBean(
+								scoreDoc.score, metadata.get("og:url"));
+						result.add(a);  
+				  }
+				 
+
+				//System.out.print("Score: " + scoreDoc.score + " ");
+				//System.out.println("File: " + doc.get(IndexConstants.FILE_PATH));
+			}
+			searchLink.close();
+			return result;
+		}
+
+		@SuppressWarnings("unused")
+		private void sortUsingIndex(String searchQuery) throws IOException,
+				ParseException {
+			searchLink = new Search(IndexConstants.indexDir);
+			long startTime = System.currentTimeMillis();
+			// create a term to search file name
+			Term term = new Term(IndexConstants.CONTENTS, searchQuery);
+			// create the term query object
+			Query query = new FuzzyQuery(term);
+			searchLink.setSortScoring(true, false);
+			// do the search
+			TopDocs hits = searchLink.search(query, Sort.INDEXORDER);
+			long endTime = System.currentTimeMillis();
+
+			System.out.println(hits.totalHits + " documents found. Time :"
+					+ (endTime - startTime) + "ms");
+			for (ScoreDoc scoreDoc : hits.scoreDocs) {
+				Document doc = searchLink.getDocument(scoreDoc);
+				System.out.print("Score: " + scoreDoc.score + " ");
+				System.out.println("File: " + doc.get(IndexConstants.FILE_PATH));
+			}
+			searchLink.close();
+		}
 }
