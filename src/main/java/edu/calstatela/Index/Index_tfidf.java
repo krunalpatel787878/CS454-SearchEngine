@@ -230,7 +230,7 @@ public class Index_tfidf {
 			  
 			  @SuppressWarnings("unchecked")
 			public static void computeTF2() throws IOException, SAXException, TikaException{
-				  FileWriter writer = new FileWriter("D:\\CS454_Workspace_Github\\CS454-SearchEngine\\MyFile.txt", true);
+				  FileWriter writer = new FileWriter("C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt", true);
 			  for(int i=0;i<docs.size();i++){
 			  String page=docs.get(i).toLowerCase();
 			  String terms[]=page.split("[^a-zA-Z0-9]+");
@@ -287,7 +287,7 @@ public class Index_tfidf {
 	            		  
 	            		  BodyContentHandler handler = new BodyContentHandler();
 	        		      Metadata metadata = new Metadata();
-	        		      FileInputStream inputstream = new FileInputStream( "D:\\CS454_Workspace_Github\\CS454-SearchEngine\\Storage\\"+docsWithUrl.get((int)m.getKey()));
+	        		      FileInputStream inputstream = new FileInputStream( "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\Storage\\"+docsWithUrl.get((int)m.getKey()));
 		        		         ParseContext pcontext = new ParseContext();
 	        		      AutoDetectParser  msofficeparser = new AutoDetectParser(); 
 	        		      msofficeparser.parse(inputstream, handler, metadata,pcontext);
