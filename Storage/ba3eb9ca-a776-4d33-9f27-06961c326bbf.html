@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+
+<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="not-ie no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<base href="http://www.calstatelausu.org/">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<title>University-Student Union</title>
+<meta name="author" content="The University Student Union" />
+<meta name="keywords" content="The University Student Union, California State University Los Angeles, Student Union, CSULA, Cal State LA, U-SU, USU, student, organizations, MORE, Cross Cultural Centers, Center For Student Involvement, Fitness Center, The Pit, The Gameroom, Student orgnizations, Calendar, Events, Gender and sexuality resource center, Pan African resource center, Asian Pacific islander, Chicana Latina, Information and Event Services, Distinguished Women, awards, Cultural Graduate Celebrations, LOUDmouth Zine, S.T.A.R.S. Program, Employment Opportunities, Board of Directors, Jobs, " />
+<meta name="description" content="The University-Student Union inc.(U-SU) at California State University, Los Angeles was established in 1975 and provides a unique setting for the encouragement of broad social, cultural, recreational, and informal educational programming for the university and its surroundings. ." />
+
+<!--[if !lte IE 6]><!-->
+<!--For CalendarArchive-->
+<link rel="stylesheet" href="css/nivo-slider.css" media="screen">
+<!--General-->
+<!-- Main stylesheet on top -->
+<link rel="stylesheet" type="text/css" href="css/global.css" mce_href="css/global.css" media="all" />
+
+	    <link type="text/css" rel="stylesheet" href="css/2structure.css" media="screen">
+		<link type="text/css" rel="stylesheet" href="css/2settings.css" media="screen">
+	    <link type="text/css" rel="stylesheet" href="css/2responsive.css" media="screen">
+<!-- Print only, on bottom -->
+<link rel="stylesheet" type="text/css" href="css/print.css" mce_href="css/print.css" media="print" />
+<link rel="stylesheet" href="css/style.css" media="screen" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="css/fancybox.min.css" media="screen" />
+<link rel="stylesheet" href="css/mediaelementplayer.min.css" media="screen" />
+<!--Bars-->
+<link rel="stylesheet" href="css/bars.css" media="screen" /> 
+<!--Slideshow-->
+<link rel="stylesheet" href="slideshow/css/ss_style.css" media="screen" />       
+<!--News Slider-->
+<link rel="stylesheet" type="text/css" href="news/css/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+<!--fonts-->
+<link rel="stylesheet" type="text/css" href="css/fonts.css" />      
+<!--<![endif]-->
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ltie8.css" />
+<![endif]-->
+<link rel="stylesheet" href="css/createEvents.css">
+<link rel="stylesheet" href="css/colorpicker/colorpicker.css" type="text/css" />
+<link rel="stylesheet" href="css/innerpage.css">
+<!-- Full Calendar-->
+<link rel='stylesheet' type='text/css' href='css/fullcalendar/fullcalendar.css' />
+<link rel='stylesheet' type='text/css' href='css/fullcalendar/fullcalendar.print.css' media='print' />
+<link type="text/css" href="css/ui/ui-lightness/jquery-ui-1.8.14.custom.css" rel="stylesheet" />
+<!-- QTip -->
+<link type="text/css" href="css/qtip.css" rel="stylesheet" />
+<!-- Time Picker -->
+<link type="text/css" href="css/ui/jquery-ui-timepicker.css" rel="stylesheet" />
+<!-- Gallery -->
+<link type="text/css" rel="stylesheet" href="gallery/skins/tn3e/tn3e.css">
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/responsive.css">
+
+</head><style>
+.white{color:white !important; font-weight: 800;}
+.gold{color:#3a3a3a !important;	}
+.man{min-height:30px; font-size:12px; text-decoration: none !important; max-width:180px; white-space:pre; text-align:center; padding:10px 10px 5px 10px; line-height:120%; vertical-align:middle;}
+.safari-man{min-height:30px; font-size:11px; text-decoration: none !important; max-width:180px; white-space:pre; text-align:center; padding:10px 10px 5px 10px; line-height:120%; vertical-align:middle;}
+.innergap:{display:block; margin-left:50px; padding-left:20px;}
+</style>
+<body  id="indexBody">
+<div id="subHeaderBar" class="csiSubHeaderBar">
+  <p>Student Organization List</p>
+  <span id="searchfix">
+<span class="no-print" id="searchbar">
+<div class="btnSearch"></div>
+<input id="search" class="searchBox" alt="Search Box" type="text" value="Search" autocomplete='off'/>
+<div class="leftSearch"></div>
+<div id="searchResultsHP">
+  <div id="flash"></div>
+  <ul id="insert_search" class="update" style=" transition:all 1s;">
+  </ul>
+</div>
+</span>
+</span></div>
+<!--End Sub Header Bar-->
+
+<script>
+var divid=''; var divid2='sorg'; var div3='sorgdiv';//Global Variables
+
+function mainfun(temp){
+temp2=temp+'div';
+
+if(temp2!=div3)
+{
+setTimeout(document.getElementById(div3).style.display="none",0);
+setTimeout('document.getElementById(temp2).style.display="block"',50);
+
+t2=20;t=t2;
+setTimeout("document.getElementById(temp2).style.paddingTop='200px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='180px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='160px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='140px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='120px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='100px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='80px'",t);	t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='60px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='40px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='20px'",t); t=t+t2;	
+setTimeout("document.getElementById(temp2).style.paddingTop='0px'",t); t=t+t2;			
+}
+div3=temp2;
+selsectlist(temp);
+}
+function selsectlist(temp)
+{
+document.getElementById(temp).style.background='#3a3a3a';
+if((divid2!='')&&(divid2!=temp)){
+	document.getElementById(divid2).style.backgroundColor='#a57e46 !important';
+	document.getElementById(divid2).addEventListener("mouseover",document.getElementById(divid2).setAttribute("style", "background-color:'#3a3a3a';"));}	
+divid2=temp;
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42139380-1', 'calstatelausu.org');
+  ga('send', 'pageview');
+
+</script><div id="mobilehead" style="display:none;"><img src="images/U-SUsmalllogo.png" alt="University-Student Union Logo" width="250"></div>
+<div id="menuBg"></div>
+<header id="header" class="container clearfix"><!-- Start header -->
+<div style="display:none;" class="print-display">
+<img src="images/U-SUlogo.png" alt="University-Student Union" width="100%" height="auto">
+</div>
+<a href="http://www.calstatela.edu/" id="logo" class="no-print">
+<!-- <img id="logoimg" src="images/U-SUlogo.png" alt="University-Student Union" width="304" height="90"> -->
+<img id="logoimg" src="images/Logo.png" alt="University-Student Union">
+<!---->
+<!--<img id="logoimg" src="images/U-SUlogo-2.png" alt="University-Student Union">-->
+</a>
+	<a id="logo" class="no-print">
+	<img style="margin-left:11px;" id="logoimg" src="images/line.png" alt="University-Student Union">
+	</a>
+<a href="http://www.calstatelausu.org/" id="logo" class="no-print">
+<!--<img style="height: 63px; margin-top: 3px; left: -3px;" alt="University-Student Union" src="images/U-SUlogo-1.png" id="logoimg"> previous logo -->
+<img  alt="University-Student Union" src="images/U-SUlogo-1T.png" id="logoimg"> <!-- New logo Added By Dhaval Shah-->
+
+	<img id="smalllogo" src="images/U-SUsmalllogo.png" alt="University-Student Union Logo" width="30" height="30" style="display:none;">
+    
+</a>
+<nav id="main-nav" class="no-print"><!-- Start Main-nav --> 
+	<ul>
+		<li> <a href="about">About</a><!--About Tab-->
+            <ul>
+                <li><a href="bod">Board of Directors</a>
+                    <ul>
+                        <li><a href="bodapplication">BOD Application</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="floorplan">Floor Plan</a></li>
+              
+                <li><a href="/reflectionroom">Reflection Room</a></li>
+                
+                <li><a href="governance">Governance</a></li>
+                <li><a href="staff">Meet our Staff</a></li>
+                <!-- <li> <a href="ksula">KSU-LA</a></li> -->
+                <li><a href="tenants">Tenants</a></li>
+                <li> <a href="history">U-SU History</a></li>
+                <!--<li> <a href="unionplazaproject">Union Plaza Project</a></li>-->
+                <li> <a href="contact">Contact Us</a></li>
+            </ul>
+        </li>
+ 
+		<li> <a href="departments">Departments</a><!--Department Tab-->
+            <ul>
+               <li><a href="csi">Center For Student Involvement</a>
+                    <ul>
+                        <li><a href="/csi-apt">Activities, Programs,<br/>and Trips</a></li>
+                        <li><a href="/goldeneagleawards">Golden Eagle Awards<br/>Of Excellence</a></li>
+                        <li><a href="http://www.calstatela.edu/studentservices/golden-eagle-handbook" target="_blank">Golden Eagle Handbook</a></li>
+                        <li><a href="/sla">Student Leader Awards</a></li>
+                        <li><a href="/studentorglist">Student Organizations</a></li>
+                        <li><a href="/fab">Freshmen Activities Board</a></li>
+                        <li><a href="/fsl">Fraternity &amp; Sorority Life</a></li>
+                        <li><a href="/csi-forms">Student Organization<br/>Handbook, Forms, and Policies</a> </li>
+                        <li><a href="/leadership-academy">Leadership Academy</a></li>
+                        <li><a href="/leadershipretreat">Leadership Retreat</a></li>
+                        <li><a href="/leadership-initiatives">Leadership Initiatives</a></li>
+                        <!--<li><a href="#">Awards, Scholarships, and<br/>Recognition</a></li>--> 
+                        <li><a href="/p3">P3</a> </li>                      
+                    </ul>
+                </li>
+                <li><a href="ccc">Cross Cultural Centers</a>
+                    <ul>
+                        <li><a  href="/ccc-services">Services & Resources</a></li>
+                        <li><a  href="/ccc-goals">Operations, Goals, and<br/>Learning Outcomes</a></li>
+                        <li><a  href="/apisrc">Asian Pacific Islander<br/>Student Resource Center</a></li>
+                        <li><a  href="/clsrc">Chicana/o Latina/o<br/>Student Resource Center</a></li>
+                        <li><a  href="/pasrc">Pan African Student<br/>Resource Center</a></li>
+                        <li><a  href="/gsrc">Gender and Sexuality Resource Center</a></li>
+                        <li><a  href="/ccc-cgc">Cultural Graduate Celebrations</a></li>
+                        <li><a  href="/stars">S.T.A.R.S. Program</a></li>
+                        <li><a  href="/loudmouth">LOUDmouth Zine</a></li>
+                        <li><a  href="/women">Distinguished Women Awards</a></li> 
+                      <!--  <li><a  href="/nextstep">Next Step</a></li>  
+                        <li><a  href="/wocc">Womyn of Color Conference</a></li> -->
+                    </ul>
+                </li>
+                <li><a href="graffix">Graffix</a>
+                  
+                    <ul>
+                        <li><a href="/acui">ACUI Awards</a></li>                     
+                    </ul>
+
+                </li>
+                <li><a href="operations">Operations</a></li>
+                <li><a href="pit">The Pit</a></li>
+                <li><a href="xtremefitness">Xtreme Fitness Center</a>
+                    <ul>
+                    	<li><a href="/xtremefitnessclass">Class Schedule</a></li> 
+                    </ul>
+            	</li>
+			</ul>
+		</li>  
+		<li> <a href="photo-gallery">Photos</a></li><!--Photos Tab-->
+		<li> <a href="employment">Employment</a></li><!--Employment Tab-->
+		<li style="width:108px;"> <a href="calendar">Events</a><!--Events Tab-->
+            <ul class="lastMenuItem">
+                <li><a href="/calendar">Calendar</a></li> 
+                <li><a href="/calendararchive">Calendar Archive</a></li>
+                <li><a href="/eaglecon">Eagle Con</a></li>
+                <li><a href="/laartexhibition">LA Art Exhibition</a></li>
+                <li><a href="/uawards">U-Awards</a></li>
+                <li><a href="/welcomeweek">Welcome Week</a></li>
+                <li><a href="/studysessions">Study Sessions</a></li>
+                <!--<li><a href="#">Event Services</a></li>--> 
+            </ul>
+      </li>
+	</ul>
+</nav><!-- End Main-nav -->  
+
+</header><!-- End header --><section id="content" class="container dept clearfix" >
+  
+
+<section id="leftColumn">
+<img src="_assets/Department Cover Image/special-pages-cover/studentorgs.jpg"  alt="Cover Image" style="position:relative;top:0px; max-width:100%;padding-bottom:10px;"> 
+
+<h3>JOIN A STUDENT ORGANIZATION</h3>
+<h9>Cal State LA is home to over 100 student organizations that address a variety of issues and plan hundreds of events each year. The student organizations represent academic, cultural, political, professional, religious, spiritual, service, social, and recreational interests. These groups provide limitless opportunities to achieve an active role on campus and to pursue individual interests. The drop down menus below includes a list of recognized organizations and their mission statements to help you find out more about what these groups have to offer. 
+Finding a student organization that is right for you involves taking risks and trying new things!
+<br></br>
+1.	Attend the Student Organization and Activities Expo at the Fall Student Fest, an event that introduces new and continuing students to Cal State LA’s student life while assisting student organizations with recruitment and promotion.
+<br>
+<br>2.	Be on the lookout for fliers, banners, or postcards that advertise student group meetings and events. Attending these activities is a great and easy way to start your on-campus involvement.
+<br>
+<br>3.	Visit the Center for Student Involvement where you can find contact and program information for recognized student organizations.
+<br>
+<br>4.	Fill out the Interest Form. Want to learn more about specific clubs or groups? Complete and send the Center for Student Involvement the Interest Form attached and we will forward your questions and information to groups you specify.</h9>
+<br></br>
+
+<div type="button" class="button man" id="sorg" onClick="mainfun('sorg');return false;" value="" style="background-color:#3a3a3a;"><span class="white">STUDENT<br>ORGANIZATIONS<span></div>
+<div type="button" class="button man" id="howto" onClick="mainfun('howto');return false;" value=""><span class="white">HOW TO START<br>A NEW ORGANIZATION<span></div>
+<div type="button" class="button man" id="maintain" onClick="mainfun('maintain');return false;" value=""><span class="white">MAINTAINING<br>UNIVERSITY RECOGNITION<span></div>
+<div type="button" class="button man" id="benifits" onClick="mainfun('benifits');return false;" value=""><span class="white">BENEFITS<br>OF RECOGNITION<span></div>
+	
+<div style="margin-top:40px; min-height:850px;">    <!--Content for All Tabs-->
+
+<div id="sorgdiv" style="display:block;"> <!--Start of SORG Content-->
+<h3>STUDENT ORGANIZATIONS</h3><br>
+<h4 class="acc-trigger">
+	<a href="#">Academic</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Academic Honors Association </strong>
+<br>To build unity among Academic Honors Association past and present, host social and community events, recruit prospective scholars, and maintain an elite academic and social status as students of California State University, Los Angeles. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://ahacsula.wix.com/ahawebsite" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">ahacsula.wix.com/ahawebsite</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=41" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Accounting Society</strong>
+<br>To provide students with information, skills and contacts that will assist them with their studies, CPA exams. career decisions, interviews and careers. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.csulaas.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.csulaas.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=1" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Advocate Student Leaders</strong>
+<br>To promote interest of philanthropy within Cal State LA and the community.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=47" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>American Society of Civil Engineers </strong>
+<br>To stimulate an interest in Civil Engineering.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.csulaasce.weebly.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.csulaasce.weebly.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=2" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Asociacion de Estudiantes de Espa�ol</strong>
+<br>To advocate and mediate in order to obtain and maintain a high quality of services for the students in Spanish Studies. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://csulagha.wix.com/2013" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">csulagha.wix.com/2013</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=23" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Association of Latino Professionals For America </strong>
+<br>To experience promote academic career issues concerning the professions of finance and accounting.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://alpfacalstatela.weebly.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">alpfacalstatela.weebly.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=36" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>BAJA SAE </strong>
+<br>To provide members with insight into opportunities available to them in the various fields of engineering and science.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/csulabajasae" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/csulabajasae</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=19" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Biomedical Engineering Society</strong>
+<br>To bring knowledge about biomedical engineering to the students of California State University, Los Angeles.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://bmes.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">bmes.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=40" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Chemistry & Biochemistry Club</strong>
+<br>The purpose of this organization shall be to provide a social and professional environment for interested students in chemistry and biochemistry fields. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://web.calstatela.edu/dept/chem/chemclub/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">web.calstatela.edu/dept/chem/chemclub/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=3" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Child Development Association</strong>
+<br>To provide support and resources for children and their families in our community.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Chinese Students and Scholars Association</strong>
+<br>To help Chinese students at Cal State LA be successful in academy, promote greater awareness of Chinese culture on campus and provide social support to Chinese students. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.cssacsula.org " onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.cssacsula.org </a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=49" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Chinese Study Club</strong>
+<br>To support and develop the way of students' learning style in Mandarin language.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=51" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Criminal Justice Student Association</strong>
+<br>To further the academic and professional interest of criminal justice students currently enrolled at Cal State LA.  	
+<br><img alt="icon" src="_assets/icons/facebook.png" style="vertical-align: middle">&nbsp; <a href="http://www.facebook.com/csulaCriminaljustice" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.facebook.com/csulaCriminaljustice</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=10" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Engineers for a Sustainable World</strong>
+<br>To help create a sense of excitement and enthusiasm about solving technical development problems within a cultural and social context.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=43" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>English Graduate Student Association</strong>
+<br>To plan and hold an annual Graduate Conference in English Studies, whereby graduate students are given the opportunity to share research and enter the community of scholars. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=17" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Fashion Association of Design Students </strong>
+<br>To stimulate mutual interest in the field of fashion design, merchandising and textiles. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=6" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Financial Management Association</strong>
+<br>To assist in the professional, educational, and social development of college students interested in finance.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Fine Art Club</strong>
+<br>To enrich the educational experience of all members interested in art.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=53" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Food Science & Technology Club </strong>
+<br>To foster a close relationship among Food Science and Technology program students and faculty at Cal State LA.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=44" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Forensics Speech and Debate</strong>
+<br>To provide as many varied and meaningful forensic activities as possible to all interested students.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://csulaforensics.wordpress.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">csulaforensics.wordpress.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=11" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Golden Eagle Motorsports</strong>
+<br>To enable and facilitate students in gaining experience that is crucial in the Engineering, Computer Science, and Technology industries. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://csulasae.wikidot.com/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">csulasae.wikidot.com/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=48" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Graphic Artists Union of Golden Eagles </strong>
+<br>To set the school agenda for the role of design in its economic, social, political and cultural contexts.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.gaugerocks.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.gaugerocks.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=28" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Kinesiology and Exercise Science Club</strong>
+<br>To offer an opportunity for students to form a community for learning and sharing ideas related to kinesiology and exercise science.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=18" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lambda Alpha Epsilon</strong>
+<br>To promote professional standards, training, procedures and ideals within the areas of the administration of criminal justice.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=13" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lobby Day Caucus</strong>
+<br>To engage in fundraising activities to support attendance of social work students at Cal State LA at the annual NASW Lobby Days event.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=34" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Masters of Social Work </strong>
+<br>To develop students understanding about social work and advocacy in efforts to promote change for the betterment of individuals.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=21" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Math Club </strong>
+<br>To increase educational opportunities, promoting professional and  personal growth.	
+<br><img alt="icon" src="_assets/icons/facebook.png" style="vertical-align: middle">&nbsp; <a href="http://www.facebook.com/mathclubcsula" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.facebook.com/mathclubcsula</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=46" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Mock-Trial Team </strong>
+<br>To promote an understanding of trial procedures and build a team to represent Cal State LA at Mock-Trial Competitions.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=30" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Philosophy Club </strong>
+<br>To provide an environment conducive to philosophical discourse.  	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://csulaphilosophyclub.wordpress.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">csulaphilosophyclub.wordpress.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=31" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Political Science Association </strong>
+<br>To debate, exchange ideas and to promote social and intellectual discourse among students.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=16" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Pre-Health Dreamers Chapter</strong>
+<br>To provide social support, resources, and advocacy opportunities for undocumented students interested in careers in health and science. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=50" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Pre-Law Society </strong>
+<br>To provide an opportunity for interested students to acquire relevant information about law school or a career in law.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/prelawcsula" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/prelawcsula</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=20" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>SACNAS Chapter</strong>
+<br>To promote professional standards, training, procedures and ideals within the areas of the administration of criminal justice.  	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/csula.SACNAS" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/csula.SACNAS</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=27" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Society for Biological Anthropology</strong>
+<br>To serve as a source of education, communication, social interaction and promotion for all students and faculty/staff members with a high degree of interest in the field of Biological Anthropology.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=38" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Society for the Advancement of Mesoamerican Studies</strong>
+<br>To further the study of Mesoamerica at CSULA and its surrounding communities.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=42" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Society of the Advancement of Management </strong>
+<br>To assist in the professional, educational, and social development of college students interested in Management, Consulting, and Logistics.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=52" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Student California Teachers Association </strong>
+<br>To improve the conditions of teaching and learning. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://cta.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">cta.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=45" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Student California Teachers Association </strong>
+<br>To improve the conditions of teaching and learning. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=54" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Student Nurses Association </strong>
+<br>To provide programs representative of fundamental interest and concerns to nursing students. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=35" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>The Teachers of English to Students of Other Languages</strong>
+<br>To promote social and intellectual interaction and intercultural exchange among students and faculty interested in the teaching of English as a Second or Foreign Language or applied linguistics. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Academic&shortname=22" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Culturally Focused</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Armenian Student Association</strong>
+<br>To inform its members and interested parties on campus of the Armenian heritage.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=1" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Black Student Union </strong>
+<br>To establish and maintain communication among members of the African academic community of Cal State LA.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=2" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Hermanas Unidas</strong>
+<br>To reach out to the Latina/o Community and provide resources as well as a family networking system.
+	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://csulahau.wix.com/csulahermanas" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">csulahau.wix.com/csulahermanas</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=3" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Hermanos Unidos </strong>
+<br>To provide students with tools and support necessary for success in college and professional fields through the bond of brotherhood.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=16" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>KALAHI Filipino American Organization</strong>
+<br>To share knowledge by offering help among members in their academics and life in general.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=4" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Korean Student Association</strong>
+<br>To develop Korean ingenuity in campus life. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/ksacsula" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/ksacsula</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>MALCS: Mujeres Activas en Letras 
+Y Cambio Social</strong>
+<br>To work toward the support, education and dissemination of Chicana/Latina and Native American Women's issues.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=6" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Movimiento Estudiantil Chicano 
+de Aztlan</strong>
+<br>To provide an opportunity for students, particularly of Mexican descent, to work together for individual and group improvement. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Multi-Cultural Greek Council</strong>
+<br>To unite multicultural Greek lettered organizations on the Cal State LA campus for the advancement of academics, the promotion of culture, and the betterment of the community.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=14" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>RAZA Unida</strong>
+<br>To promote cultural understanding and appreciation of Latin America. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=15" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>The Queer Connection</strong>
+<br>To be representative and servant of the people in the Gay community and to those communities surrounding Cal State LA.	
+<br><img alt="icon" src="_assets/icons/facebook.png" style="vertical-align: middle">&nbsp; <a href="http://www.facebook.com/csula.tqc" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.facebook.com/csula.tqc</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=11" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Vietnamese Student Association</strong>
+<br>To maintain the Vietnamese culture without political involvement and create more friendly and sympathetic relations in club or community.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Culturally Focused&shortname=12" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Fraternities</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Alpha Phi Omega Lambda Mu</strong>
+<br>To develop leadership, to promote friendship, and to provide service to humanity.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.apo.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.apo.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=3" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Delta Sigma Chi Co-Ed Fraternity</strong>
+<br>To form a closer union among college men and women for the enhancement of intellectual, community, social life and the overall life at Cal State LA.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=4" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Gamma Zeta Alpha </strong>
+<br>To provide cultural awareness by walking with honor and respect, establishing solid unity among our members while honoring the importance of education and leadership.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://gammas.org/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">gammas.org/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lambda Theta Phi Latin Fraternity, Inc.</strong>
+<br>To foster leadership development of its members through the coordination of educational, cultural, and awareness events. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=13" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Multi-Cultural Greek Council </strong>
+<br>To unite multicultural Greek lettered organizations on the Cal State LA campus for the advancement of academics, the promotion of culture, and the betterment of the community.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=6" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Phi Iota Alpha Fraternity, Inc. </strong>
+<br>To develop leaders and create innovative ways to unite the Latino Community.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.phiota.info" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.phiota.info</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=10" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Phi Sigma Kappa Fraternity</strong>
+<br>To foster the bonds of Brotherhood among its members, to develop cultural interests, to encourage scholastic accomplishments.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=11" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Sigma Alpha Epsilon Fraternity</strong>
+<br>To provide a structured environment in which friendships can thrive, foster brotherhood, leadership, scholarship, citizenship, and personal development.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.sae.net" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.sae.net</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=14" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Sigma Lambda Beta International Fraternity</strong>
+<br>To educate society's knowledge and awareness, of the Latino population.  	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.sigmalambdabeta.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.sigmalambdabeta.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=12" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Sigma Nu</strong>
+<br>To form strong ties of Brotherhood through Love, Truth, and Honor. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.sigmanu.org/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.sigmanu.org/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Fraternities&shortname=15" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Honor Society</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Beta Alpha Psi, Accounting Honor Society</strong>
+<br>To encourage and foster the ideal of service as the basis of the accounting profession.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.csulabap.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.csulabap.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=2" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Chapter Gamma Psi of Sigma Delta Pi </strong>
+<br>To increase a wider knowledge of Hispanic contributions to modern culture.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=14" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Chi Epsilon Civil Engineering Honor Society</strong>
+<br>To maintain and promote the status of civil engineering as an ideal profession.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.chi-epsilon.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.chi-epsilon.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=13" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Golden Key International Honour Society </strong>
+<br>To recognize and encourage scholastic achievement and excellence in all undergraduate fields of study.  	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://goldenkey.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">goldenkey.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lambda Alpha National Honor Society for Anthropology; Delta California Chapter</strong>
+<br>To encourage and stimulate scholarship and research in Anthropology by recognizing and honoring superior achievement in the discipline among students, faculty and other persons.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=6" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lambda Pi Eta, Communication Honor Society</strong>
+<br>To promote interaction among the graduate students in the communication studies graduate program and the faculty, staff, and administration.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Order of Omega</strong>
+<br>To recognize outstanding leadership in fraternity and sorority systems, to promote fraternity/sorority life on campus and provide outstanding leadership required in being a role model for all.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.orderofomega.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.orderofomega.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=15" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Phi Alpha Theta, History Honor Society</strong>
+<br>To extend recognition to top students in history and to provide them with an academic organizaiton that provides this honor.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://web.calstatela.edu/orgs/pat/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">web.calstatela.edu/orgs/pat/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=9" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Professionals in Human Resources Association </strong>
+<br>To promote understanding of the Human Resources profession among the university students and faculty.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=10" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Tau Beta Pi, Engineering Honor Society</strong>
+<br>To mark in a fitting manner those who have conferred honor upon their Alma Mater by distinguished scholarship and exemplary character as undergraduate.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.tbp.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.tbp.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Honor Society&shortname=16" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Professional</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Alpha Tau Delta 
+(Nursing Association)</strong>
+<br>To further higher educational standards for persons of the nursing profession.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=30" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>American Association of Airport Executives</strong>
+<br>To establish both social and business relationships with people in the fields of airport management and its allied professions.
+	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://aaaecsula.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">aaaecsula.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=20" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Association of Student Social Workers </strong>
+<br>To promote unity among Social Work Students at California State University, Los Angeles. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/csula.assw.1" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/csula.assw.1</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=26" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Criminal Justice Student Association</strong>
+<br>To further the academic and professional interest of criminal justice students currently enrolled at Cal State LA.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=4" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Entrepreneurial Collegiate Consulting Organization</strong>
+<br>To provide members with opportunities to engage each other and network with different people in the field of business and beyond. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://eccocsula.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">eccocsula.org</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Financial Management Association
+</strong>
+<br>To assist in the professional, educational, and social development of college students interested in finance.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/groups/csulafma/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/groups/csulafma/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Golden Eagle Television</strong>
+<br>To enter various media industries ecompassing: television, film, animation, news, sports, journalism, advertising, public relations, and media management. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/CSULAGETV" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/CSULAGETV</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=8" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Her Campus </strong>
+<br>To create a campus based community that women can join in other to network, gain experience, and build friendships, while producing online content. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://hercampus.com/calstatela" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">hercampus.com/calstatela</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=21" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Hispanic Business Society</strong>
+<br>To improve the lives of CSULA students by encouraging the development of well trained leaders and professional skills for successful careers.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://hbscsula.wix.com/hbs-csula" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">hbscsula.wix.com/hbs-csula</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=9" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Institute of Electrical and Electronics</strong>
+<br>To further the knowledge of the theory and practice of electronics, communications, and other related fields of engineering and science.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=32" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Marketing Club</strong>
+<br>To prepare students who are interested in careers in marketing, retail, selling and sales management with the essential discipline skills.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.csulamktclub.info" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.csulamktclub.info</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=33" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>National Society of Black Engineers</strong>
+<br>To stimulate and develop student interest in engineering, technology, math and natural science.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=27" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Phi Pi Alpha (Firefighter Association)</strong>
+<br>To provide a professional fire officer atmosphere by setting standards in conduct, appearance and example.
+	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=22" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Pre-Pharmacy Student Association</strong>
+<br>To provide an educational forum that offers information ranging from the most recent in pharmaceutical technology to introductory information.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=23" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Pre-Physical/Occupational Therapy Club</strong>
+<br>To assist undergraduate students to pursue their career goals in the Physical/Occupational Therapy profession.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=28" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Professionals in Human Resources Association </strong>
+<br>To promote understanding of the Human Resources profession among the university students and faculty.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=24" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>School Psychology Student Association</strong>
+<br>To promote and support the pursuit of professional preparation in the field of School Psychology.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=25" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>School-Based Family Counseling
+ Student Association</strong>
+<br>To promote & support the pursuit of professional preparation in the field of School Based Family Counseling.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=17" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Society of Hispanic Engineering and Science Students</strong>
+<br>To advance Hispanic student in engineering, in education, employment, economic and social welfare.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://shesscsula.weebly.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">shesscsula.weebly.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=34" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Society of Women Engineers</strong>
+<br>To encourage Women in Engineering and Science fields.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=31" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Turing</strong>
+<br>To host Tech Events and making students more aware about Technology.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Professional&shortname=29" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Religious/Spiritual</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Chinese Bible Study Fellowship </strong>
+<br>To invite Chinese students, study the bible, and have fellowship to care for each other. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Religious/Spiritual&shortname=4" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Christians on Campus </strong>
+<br>To give hope, faith, and understanding through and by the word of God in love and fellowship in God's holy spirit.
+	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Religious/Spiritual&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>CRU </strong>
+<br>To foster a knowledge of Jesus Christ and biblical Christianity among the students of CSULA.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.cru.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.cru.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Religious/Spiritual&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>InterVarsity Christian Fellowship </strong>
+<br>To be an organization of students who follow Jesus as savior and Lord.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://intervarsitycsula.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">intervarsitycsula.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Religious/Spiritual&shortname=6" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Muslim Student Association</strong>
+<br>To help educate people about the culture and history of Islam.
+	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Religious/Spiritual&shortname=8" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Service</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Chicanos/Latinos for Community Medicine     </strong>
+<br>To improve the representation of Mexican-Americans within the medical schools of the Southwest.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=2" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Circle K International </strong>
+<br>To develop College and University students into global network of responsible citizens and leaders with a lifelong commitment to services. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=1" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Global Brigades</strong>
+<br>To organize medical and dental brigades to rural communities in developing nations with the goal of ultimately spreading awareness of global health disparities and improving equality of life in those same communities. 	
+<br><img alt="icon" src="_assets/icons/facebook.png" style="vertical-align: middle">&nbsp; <a href="http://www.facebook.com/calstatelaglobalbrigades" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.facebook.com/calstatelaglobalbrigades</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=3" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Global Health Association</strong>
+<br>To unite Cal State LA students to promote health in local and global communities through service and education. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://csulagha.wix.com/2013" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">csulagha.wix.com/2013</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=8" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Hydrogeology Student Union</strong>
+<br>To further the knowledge and understanding of hydrogeoligical and environmental sciences throughout the Cal State L.A. academic community. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Pre-Vet and Animal Welfare Club </strong>
+<br>To enhance the knowledge of job fields within the veterinary medicine and animal welfare fields.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=9" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Rehabilitation Counseling Association</strong>
+<br>To operate as non profit public benefit student organization and is not organized for the private gain of any person.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.cslarca.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.cslarca.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Service&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Sororities</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Alpha Sigma Tau
+</strong>
+<br>To promote a sense of sisterhood among its members.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.astcsula.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.astcsula.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=1" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Alpha Theta Pi Sorority</strong>
+<br>To further social activities and participation in charitable works.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=12" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Chi Sigma Phi</strong>
+<br>To encourage its members to interact with one another, be productive members of the community, learn and share various Asian cultural backgrounds. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=13" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Delta Zeta Sorority</strong>
+<br>To stimulate one another in the pursuit of knowledge, to promote the moral and social culture of its members. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://deltazetacsula.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">deltazetacsula.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=15" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Kappa Delta Chi Sorority, Inc.</strong>
+<br>To promote the traditional values of unity, honesty, integrity, and leadership among women.	
+<br><img alt="icon" src="_assets/icons/facebook.png" style="vertical-align: middle">&nbsp; <a href="http://www.facebook.com/kappadeltachicsula?fref=t" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.facebook.com/kappadeltachicsula?fref=t</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=16" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Kappa Zeta Phi</strong>
+<br>To provide an opportunity for lasting friendship and sisterhood, to develop the individual in the areas of wholesome attitudes and ideals.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=17" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lambda Theta Alpha, Latin Sorority Inc.</strong>
+<br>To establish a bond similar to that of sisterhood by being a recognized and established chapter, through community activism, as well as academic and social support.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=6" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Lambda Theta Nu Sorority, Inc.</strong>
+<br>To promote the advancement of Latinas through various campus activities and community service.
+	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Sigma Gamma Rho Sorority, Inc.</strong>
+<br>To enhance quality of  life within the community, Public service, leadership development, and education of youth.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.sgrho1922.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.sgrho1922.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=9" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Sigma Lambda Gamma National Sorority Inc.</strong>
+<br>To bring different cultures together expand and generate women to a successful future.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=10" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Zeta Phi Beta Sorority, Inc.</strong>
+<br>To promote the cause of education by encouraging the highest standards of scholarship through scientific, literary, cultural and education programs. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.zphib1920.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.zphib1920.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Sororities&shortname=11" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+<h4 class="acc-trigger">
+	<a href="#">Special Interest</a>
+</h4>
+<div class="acc-container"><!-- Start .acc-container -->
+<div class="content">
+<h9>		
+     
+<!--Club info start--> 
+<br>
+<strong>Associate Student Leaders</strong>
+<br>To promote interest of philanthropy within the California State University, Los Angeles and the community.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=44" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Ballroom Dancing Club</strong>
+<br>To provide an opportunity to practice ballroom dance skills in a social environment.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=2" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Cinematic Visions
+</strong>
+<br>To provide an extra curricular education forum in which members are encouraged to refine their skills as they relate to film and video production, broadcast journalism and multimedia.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=26" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Eagle Jiu-Jitsu</strong>
+<br>Learn and share knowledge of Jiu-Jitsu, to practice Jiu-Jitsu, to go and witness Jiu-jitsu at Jiu-jitsu events, and to spread the love and joy of Jiu-jitsu.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=22" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Early Entrance Program Club</strong>
+<br>To create and reinforce an environment conducive to the social and academic development of Early Entrance Program students.
+	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=27" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Earthquake Engineering Research Institute</strong>
+<br>To promote student interest in the field of Earthquake Engineering Research. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=5" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Entrepreneurial Collegiate Consulting Organization</strong>
+<br>To provide members with opportunities to engage each other and network with different people in the field of business and beyond. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://eccocsula.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">eccocsula.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=39" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Evolve Dance Crew</strong>
+<br>To educate, explore, and experience dance for the love of dance. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=37" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Feminist Majority Leadership Alliance</strong>
+<br>To establish a broad constituency to work in pursuit of feminist ideals-social, political, and economic equality for all women. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=7" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Film Productions</strong>
+<br>To create and distribute original, student made films.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://facebook.com/filmproductionsclub" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">facebook.com/filmproductionsclub</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=28" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Forensic Science Student Association</strong>
+<br>To bring together students across various majors at Cal State LA and inform them of the possibilities of working in the field of forensic science and to encourage interdisciplinary collaboration in forensic research.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://fssa-csula.org/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">fssa-csula.org/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=42" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Geosciences Club</strong>
+<br>To promote social and intellectual interaction among students interested in the geological sciences.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=19" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Golden Eagle Productions</strong>
+<br>To enter various media industries encompassing: television, film, animation, news, sports, journalism, advertising, public relations, and media management.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=41" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Golden Eagle Radio</strong>
+<br>To provide a wide range of quality music, entertainment, and news for the East Los Angeles area.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.goldeneagleradio.org" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.goldeneagleradio.org</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=9" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>GravitAS Animation Society</strong>
+<br>To provide our animation students with the opportunity to collaborate and talk about animation. 
+	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=29" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>League of Legends Club</strong>
+<br>To foster strong teams building skills in players by emphasizing the value of cooperation and openness to change. 	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.csulalol.com" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.csulalol.com</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=14" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Motorcycle Enthusiast Club </strong>
+<br>The purpose of this organization is to create a community for anyone with an interest in motorcycle. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=31" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>National Student Speech Language 
+and Hearing Association</strong>
+<br>To provide support and information for students preparing for a professional career in the area of Communication Disorders.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=32" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Project Choice</strong>
+<br>To reduce alcohol and other drug behavior associated with HIV exposure.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.projectchoicecsula.org/" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.projectchoicecsula.org/</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=20" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Spirit Squad </strong>
+<br>To work as a team to overcome challenges to further increase our love and desire to perform. 	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=33" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Student Health Advisory Club </strong>
+<br>To promote healthy behaviors among Cal State L.A. students through outreach and education.	
+<br><img alt="icon" src="_assets/icons/web.png" style="vertical-align: middle">&nbsp; <a href="http://www.calstatela.edu/studenthealthcenter/shac" onClick="window.open(this.href,  null, 'height=1650, width=999, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">www.calstatela.edu/studenthealthcenter/shac</a>
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=36" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Students for Bernie Sanders 2016 </strong>
+<br>To promote awareness and discussion of the Bernie Sanders presidential campaign.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=43" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Students United to Reach Goals in Education</strong>
+<br>To provide Cal State LA AB 540 students (non-resident students exempt from out of state tuition) with informational resources to guide their education.  	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=23" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+     
+<!--Club info start--> 
+<br>
+<strong>Young Americans for Freedom</strong>
+<br>To promote conservative ideals and help educate students on what a conservative believes in, and assist in creating open discussion about conservatism and its beliefs.	
+<br><img alt="icon" src="_assets/icons/icon-email-2.png" style="vertical-align: middle">&nbsp; <a href="email?type=Special Interest&shortname=45" onClick="window.open(this.href,  null, 'height=380, width=380, toolbar=0, location=0, status=0, scrollbars=1, resizable=1'); return false;">Send message</a>
+<br>
+</br><div class="line-separator"></div>
+<!--Club info END--> 
+ 
+</h9>
+</div>
+</div><!-- End .acc-container -->
+   
+</div><!--End of SORG Content-->
+
+<!--//Second Section Starts-->  
+<div id="howtodiv" style="display:none;"><!--How to Content Starts-->
+<h3>HOW TO START A NEW STUDENT ORGANIZATION</h3>
+<br>
+<h9>
+Starting a new student club or organization at Cal State LA not only adds to the variety of communities available on campus but is also easy to do! This page contains the forms and information you will need to successfully complete the New Student Organization Recognition process. It is through student organizations that Cal State LA’s spirit and traditions are created and preserved. Thank you for taking the initiative to begin a new student organization!
+<br><br>
+Any time throughout the process you need assistance with your organization, please contact us at <br>(323) 343-5110, or come by the Center for Student Involvement office, <br>located in the University-Student Union, Room 204
+</h9>
+<br><br>
+
+<h4 class="acc-trigger"><a href="#">PROCEDURE TO APPLY FOR RECOGNITION AS A  NEW STUDENT ORGANIZATION</a></h4>
+<div class="acc-container">
+<div class="content"><br>
+<h9>    
+<strong>1. SUBMIT THE FOLLOWING TO THE CENTER FOR STUDENT INVOLVEMENT (CSI):</strong>
+<ul class="arrow"><h9>
+<li>A completed <a href="/usuforms/csi/Forms/PetitionForRecognition.pdf" target="_blank">Student Organization Petition for Recognition</a> containing the names, signatures, and CIN of at least 30 currently enrolled Cal State LA students (in blue or black ink only).
+<li>A completed <a href="/usuforms/csi/Forms/StudOrgRoster.pdf" target="_blank">Student Organization Roster</a> with the names of at least five currently enrolled California State University, Los Angeles students who are, or have stated in writing an intent to be, members of your organization (in blue or black ink only).
+<li>A completed <a href="/usuforms/csi/Forms/OIForm.pdf" target="_blank">Student Organization Officer Information Form</a> with the names and the contact information of at least five officers. All officers of the new organization must be currently enrolled or continuing Cal State LA students, in good standing at the University, with a Cal State LA cumulative grade point average of 2.0 or higher. Please complete this form online, print, and have all officers and advisors sign this form prior to submitting it to CSI. <br><br><strong>CLUB PRESIDENTS AND TREASURERS <br>MUST ALSO MEET THE FOLLOWING REQUIREMENTS:</strong>
+</li></h9>
+<ul class="arrow">
+<br>
+<li><strong>Minimum Academic Qualifications</strong>
+<br>Students must be matriculated and enrolled at a CSU campus and maintain a minimum overall 2.0 grade point average each term. The student must be in good standing and must not be on probation of any kind.
+<br><br>
+<li><strong>Incumbent Unit Load</strong>
+<br>This requires undergraduate students to earn six semester (nine quarter) units per term while holding office. Graduate and credential students must earn three semester (four quarter) units per term while holding office. Students enrolled at quarter campuses must attend a minimum of two quarters during the academic year to maintain eligibility.
+<br><br>
+<li><strong>Incumbent Maximum Allowable Units</strong>
+<br>Undergraduate students are allowed to earn a maximum of 150 semester (225 quarter) units or 125 percent of the units required for a specific baccalaureate degree objective, whichever is greater. Graduate and credential students are allowed to earn a maximum of 50 semester (75 quarter) units or 167 percent of the units required for the graduate or credential objective, whichever is greater. Students holding more than this number of units will no longer be eligible for minor student government office.
+<li>Signed STANDARDS FOR STUDENT CONDUCT: HAZING AND NON DISCRIMINATION  section (included on the Student Organization Officer Information Form) that affirm that the organization members will not haze, or restrict membership on the basis of race, religion, national origin, ethnicity, color, age, gender, gender identification, ancestry, marital status, citizenship, political affiliation, sexual orientation, physical or mental disability, medical condition, pregnancy, genetic information, covered veteran status, or any other classification that precludes a person from consideration as an individual. (Note: Social fraternities and sororities are exempt from membership practices based on gender under the provisions of Section 86.14 of Title IX, United States Code).
+<li>Presidents must initial the ORGANIZATION HANDBOOK ACKNOWLEDGEMENT section to acknowledge they have been directed to the electronic PDF format of the CSI Student Organization Handbook on-line through the CSI website and that it is the responsibility of its officers and group members to read, understand, and comply with the policies and procedures and any revisions made to the handbook. 
+<li>All student organization officers and advisors must also review and sign the Cal State LA ALCOHOL PROCEDURES & PREVENTION RESOURCES form.
+</li>
+</ul> 
+</ul>
+<strong>2. SUBMIT YOUR ORGANIZATION’S CONSTITUTION AND BYLAWS:</strong>
+<ul class="arrow">
+<li>Include a statement of purpose, definition of categories of membership and rules of procedure. The California Code of Regulations requires that student organizations submit a local campus organization constitution. A sample of a local constitution and by-laws is included and can be found <a href="http://www.calstatelausu.org/usuforms/csi/Forms/SampleConstitution.pdf" target="_blank">here</a>.
+<li>A copy of the Constitution and By-laws of any parent organization with which your organization is affiliated, including any group that assists your organization financially or who has authority over your organization in any way must also be submitted to CSI.</li>
+</ul>
+<strong>3. ATTEND THE NEXT SCHEDULED REQUIRED <br>ORGANIZATION DEVELOPMENT MEETING:</strong>
+<br><br>
+<ul class="arrow">
+<div class="CSSTableGenerator" >
+<table style="line-height:160%;">
+<tr><td style="text-align:center;"><strong>Fall 2015</strong></td><td style="text-align:center;"><strong>Winter 2016</strong></td><td style="text-align:center;"><strong>Spring 2016</strong></td></tr>
+<tr>
+<td style="text-align:center;"><strong>October 08, 5pm &nbsp; | &nbsp; U-SU<br>or<br>October 16, 2pm &nbsp; | &nbsp; U-SU</strong></td>
+<td style="text-align:center;"><strong>January 14, 5pm &nbsp; | &nbsp; U-SU<br>or<br>January 22, 2pm &nbsp; | &nbsp; U-SU</strong></td>
+<td style="text-align:center;"><strong>April 22, 2pm &nbsp; | &nbsp; U-SU<br>or<br>April 28, 5pm &nbsp; | &nbsp; U-SU</strong></td>
+</tr>
+</table>
+</div>
+<br><h9>Once all the required information listed above has been submitted to the CSI, it will be reviewed for accuracy and completeness. The new organization will be notified within approximately fifteen (15) school days regarding University recognition.</h9>
+</ul>
+ 
+</h9> 
+</div>
+</div><!-- end .acc-container --> 
+</div><!--End of How to Content-->
+
+<div id="maintaindiv" style="display:none;"><!--Start of Maintain Content-->
+<h3>MAINTAINING UNIVERSITY RECOGNITION</h3>
+<br>
+<h9>    
+<strong>YOUR ORGANIZATION MUST:</strong>
+<ul class="arrow">
+<li>File a new Student Organization Officer Information Form at the beginning of the fall quarter and at any time your organization elects new officers. All officers listed on the Student Organization Officer Information Form must be currently enrolled or continuing California State University, Los Angeles students, in good standing (2.00 GPA or higher).<br>
+<br><strong>Club Presidents and Treasurers must also meet the following requirements:</strong><br>
+<br><ul class="arrow">
+<li><strong>Minimum Academic Qualifications</strong><br>
+Students must be matriculated and enrolled at a CSU campus and maintain a minimum overall 2.0 grade point average each term. The student must be in good standing and must not be on probation of any kind.
+<li><strong>Incumbent Unit Load</strong><br>
+This requires undergraduate students to earn six semester (nine quarter) units per term while holding office. Graduate and credential students must earn three semester (four quarter) units per term while holding office. Students enrolled at quarter campuses must attend a minimum of two quarters during the academic year to maintain eligibility.
+<li><strong>Incumbent Maximum Allowable Units</strong><br>
+Undergraduate students are allowed to earn a maximum of 150 semester (225 quarter) units or 125 percent of the units required for a specific baccalaureate degree objective, whichever is greater. Graduate and credential students are allowed to earn a maximum of 50 semester (75 quarter) units or 167 percent of the units required for the graduate or credential objective, whichever is greater. Students holding more than this number of units will no longer be eligible for minor student government office.
+<li>Signed STANDARDS FOR STUDENT CONDUCT: HAZING AND NON DISCRIMINATION  section (included on the Student Organization Officer Information Form) that affirm that the organization members will not haze, or restrict membership on the basis of race, religion, national origin, ethnicity, color, age, gender, gender identification, ancestry, marital status, citizenship, political affiliation, sexual orientation, physical or mental disability, medical condition, pregnancy, genetic information, covered veteran status, or any other classification that precludes a person from consideration as an individual. (Note: Social fraternities and sororities are exempt from membership practices based on gender under the provisions of Section 86.14 of Title IX, United States Code).
+<li> Presidents must initial the ORGANIZATION HANDBOOK ACKNOWLEDGEMENT section to acknowledge they have been directed to the electronic PDF format of the CSI Student Organization Handbook on-line through the CSI website and that it is the responsibility of its officers and group members to read, understand, and comply with the policies and procedures and any revisions made to the handbook.  
+<li>All student organization officers and advisors must also review and sign the Cal State LA ALCOHOL PROCEDURES & PREVENTION RESOURCES form.
+</li></ul></li></ul>
+<ul class="arrow" style="margin-top:-20px;">
+<li>Attend the Required Student Organization Meeting conducted by the Center for Student Involvement each quarter (except summer). One member of the organization must attend the entire meeting.
+<br><br>
+<div class="CSSTableGenerator" >
+<table style="line-height:160%;">
+<tr><td style="text-align:center;"><strong>Fall 2015</strong></td><td style="text-align:center;"><strong>Winter 2016</strong></td><td style="text-align:center;"><strong>Spring 2016</strong></td></tr>
+<tr>
+<td style="text-align:center;"><strong>October 08, 5pm &nbsp; | &nbsp; U-SU<br>or<br>October 16, 2pm &nbsp; | &nbsp; U-SU</strong></td>
+<td style="text-align:center;"><strong>January 14, 5pm &nbsp; | &nbsp; U-SU<br>or<br>January 22, 2pm &nbsp; | &nbsp; U-SU</strong></td>
+<td style="text-align:center;"><strong>April 22, 2pm &nbsp; | &nbsp; U-SU<br>or<br>April 28, 5pm &nbsp; | &nbsp; U-SU</strong></td>
+</tr>
+</table>
+</div>
+<li>Report any revision of the name, constitution and by-laws, or new officers of your organization to CSI. All revisions and changes must be made in accordance with the procedures prescribed within your existing constitution and by-laws.
+<li>Follow all University rules and policies for student organizations. See the Student Organization Handbook for further details online <a href="http://www.calstatela.edu/studentservices/student-organization-handbook" target="_blank">here</a></li>
+</ul>  
+</h9> 
+</div><!--End of Maintain Content--> 
+
+<div id="benifitsdiv" style="display:none;"><!--Start of Benifits Content--> 
+<h3>BENEFITS OF UNIVERSITY RECOGNITION STARTS</h3>
+<br>
+<h9>    
+<strong>UNIVERSITY RECOGNIZED ORGANIZATIONS AT Cal State LA <br>ARE ELIGIBLE FOR THE FOLLOWING BENEFITS:</strong>
+<ul class="arrow">
+<li>Use of certain University facilities at no cost (i.e. classroom space and walkway tables).
+<li>Eligibility for organization website.
+<li>Access to linking organization website with University-Student Union website.
+<li>Access to Advisor resources.
+<li>Access to publicize events on the Student Organization Calendar of Events Weekly E-mail.
+<li>Access to information on retreat planning, team builders, enhancing communication skills, officer transitions, and other organizational topics within the resource library.
+<li>Use of an organization mailbox located in the University-Student Union.
+<li>Use of flyer posting areas of the University for the purpose of publicizing organization events.
+<li>Use of audiovisual equipment on-campus.
+<li>Ability to request funding from the Associated Students, Inc.
+<li>Assistance from the CSI staff to help the organization function effectively through advisement, program planning, and leadership training.
+<li>Access to the CSLA Federal Credit Union for the purpose of establishing an organization account.
+
+<br><br>
+Policies and procedures articulated on this page are accurate at the time of publication and, however, are subject to change throughout the academic year. Student organizations will be notified of policy changes in a timely manner.
+</ul> 
+</h9> 
+
+</div><!-- End of Benifits Content --> 
+</div><!--End of All Tabs Content-->
+</section><!-- End leftColumn-->
+
+
+<!-- End leftColumn-->
+
+
+<!-- Start rightColumn-->
+<section id="rightColumn" class="no-print">
+
+
+
+    <ul class="arrow">
+    
+    <li><a  title="CSI Activities, Programs, and Trips" href="csi-apt">Activities, Programs,<br/>and Trips</a></li>
+	<li><a title="Golden Eagle Awards Of Excellence" href="goldeneagleawards">Golden Eagle Awards <br />Of Excellence</a></li>
+    <li><a title="Golden Eagle Handbook" href="http://www.calstatela.edu/studentservices/golden-eagle-handbook" target="_blank">Golden Eagle Handbook</a></li>
+	<li><a title="Student Leader Awards" href="sla">Student Leader Awards</a></li>
+    <li><a title="Student Organizations" href="/studentorglist">Student Organizations</a></li>
+    <li><a title="Freshmen Activities Board" href="/fab">Freshmen Activities Board</a></li>
+    <li><a title="Fraternities &amp; Sororities" href="/fsl">Fraternity &amp; Sorority Life</a></li>
+    <li><a title="Student Organization Handbook, Forms, and Policies" href="/csi-forms">Student Organization<br/>Handbook, Forms, and Policies</a> </li>
+    <li><a href="leadership-academy">Leadership Academy</a></li>
+    <li><a href="leadershipretreat">Leadership Retreat</a></li>
+	<li><a title="Leadership Initiatives" href="leadership-initiatives">Leadership Initiatives</a></li>
+ 	<!--<li><a title="Awards, Scholarships, and Recognition" href="#">Awards, Scholarships, and<br/>Recognition</a> </li>-->
+    <li><a title="P3" href="/p3">P3</a> </li>
+    
+    </ul>
+ 
+
+</section>
+<div id="righticons">
+<div id="one-fourth last" style="margin-left:700px;">
+    <span class="no-print" style="float:left; margin-left:20px; margin-right:0px; margin-top:0px;cursor:pointer;"> 
+    <span style="margin-top:0px; width:35px; height:35px; float:left;">
+		<ul class="mainoffice-icons" style="list-style:none;">
+        <li class="fbicon"><a href="https://www.facebook.com/csicalstatela"  target="_blank" alt="Facebook"></a></li>
+        <li class="twicon"><a href="https://twitter.com/csicalstatela"  target="_blank" alt="Twitter"></a></li>
+        <li class="instagramicon"><a href="http://instagram.com/csicalstatela"  target="_blank" alt="Instagram"></a></li>
+        <li class="print"><a onClick="window.print()" alt="Print"></a></li>
+		</ul>
+	</span>
+<br><br>  
+</span> 
+<!--<div style="margin-top:40px; margin-left:-40px; float:left;color: #4e4e4e;">
+OFFICE HOURS
+<br>Mon - Thu : 8:00am - 6:00pm
+<br>Fri : 8:00am - 5:00pm
+<br>Sat : Closed
+<div class="line-separator"></div>
+5154 State University Drive
+<br>Room 204, U-SU
+<br>Los Angeles, CA 90032
+<br>Phone: 323-343-5110
+<br>Fax: 323-343-5101</br>    
+</div>-->
+
+<div style="margin-top:40px; margin-left:-40px; float:left;color: #4e4e4e;">
+OFFICE HOURS
+<br>Mon - Thu : 8:00am - 6:00pm
+<br>Fri : 8:00am - 5:00pm
+<br>Sat : Closed
+<div class="line-separator"></div>
+5154 State University Drive
+<br>Room 204, U-SU
+<br>Los Angeles, CA 90032
+<br>Phone: 323-343-5110
+<br>Fax: 323-343-5101</br>    
+</div>
+    
+    <img src="_assets/departments/csi_logo_med.gif" style="position:relative;top:30px;" alt="logo">
+    </span>
+</div>
+</div><!-- End rightColumn-->
+</section><!-- end #content -->
+
+<div class="no-print">
+<footer id="footer" class="clearfix no-print">
+  <div class="container no-print">
+    <div id="footerLeftCont" class="three-fourth">
+      <nav id="footer-nav" class="clearfix no-print">
+        <ul>
+          <li><a href="http://www.calstatelausu.org/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="photo-gallery">Photos</a></li>
+          <li><a href="employment">Employment</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- end #footer-nav -->
+      
+      <ul class="contact-info" >
+        <li class="address"><span style="color: #DBDBDB">Building Hours</span>
+          
+          <table cellpadding="0" cellspacing="0">
+            <tr style="color: #DBDBDB">
+              <td>Mon-Fri</td>
+              <td>&nbsp; : &nbsp;</td>
+              <td>7am - 10pm</td>
+            </tr>
+            <tr style="color: #DBDBDB">
+               <td>Sat </td>
+              <td>&nbsp; : &nbsp;</td>
+              <td>7am - 7pm</td>
+            </tr>
+            <tr style="color: #DBDBDB">
+              <td>Sun </td>
+              <td>&nbsp; : &nbsp;</td>
+              <td>Closed</td>
+            </tr>
+          </table>
+        </li>
+        <li class="phone" style="color: #DBDBDB">(323) 343-2450</li><br><br>
+      <!--  <li> <a href="http://www.calstatela.edu" target="_blank" title="Cal State LA"><img id="csula-logo" src="images/csula-logo.png" alt="logo"/></a> </li>-->
+       
+      </ul>
+      <!-- end .contact-info  <li class="email"><a href="mailto:usugraffix@gmail.com">usugraffix@gmail.com</a></li> --> 
+      
+    </div>
+    <!-- end .three-fourth --> 
+    
+    <div id="footerRightCont" class="one-fourth last"> <span class="title">Departments</span>
+      <ul class="dept-icons dark" style="list-style:none;">
+        <li class="csi"><a href="csi" title="Center For Student Involvement"></a></li>
+        <li class="ccc"><a href="ccc" title="Cross Cultural Centers"></a></li>
+        <li class="graffix"><a href="graffix" title="U-SU Graffix"></a></li>
+        <li class="pit"><a href="pit" title="The Pit"></a></li>
+        <li class="xt"><a href="xtremefitness" title="Xtreme Fitness"></a></li>
+        <li class="meetings"><a href="about" title="About Us"></a></li>
+        <li class="calendar"><a href="calendar" title="U-SU Calendar"></a></li>
+         
+      </ul>
+    </div>
+    <!-- end .one-fourth.last --> 
+    
+  </div>
+  <!-- end .container --> 
+  
+</footer>
+<!-- end #footer -->
+
+<footer id="footer-bottom" class="clearfix no-print">
+  <div class="container no-print">
+  
+      <ul>
+        <li>&copy; 2015 University-Student Union at Cal State LA</li>
+        <li><a href="http://www.calstatelausu.org/contact">5154 State University Dr. Los Angeles CA, 90032</a></li>
+        <li><a href="http://get.adobe.com/reader/">Download Adobe Acrobat Reader</a></li>
+      </ul>
+  </div>
+<!-- end .container --> 
+  
+</footer>
+<!-- end #footer-bottom -->
+</div>
+<!--[if !lte IE 6]><!--> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/ui/jquery-ui-1.8.14.min.js"><\/script>')</script> 
+<!--[if lt IE 9]> <script src="js/selectivizr-and-extra-selectors.min.js"></script> <![endif]--> 
+<script src="js/respond.min.js"></script> 
+<script src="js/jquery.easing-1.3.min.js"></script> 
+<script src="js/jquery.fancybox-1.3.4.pack.js"></script> 
+<script src="js/jquery.smartStartSlider.min.js"></script> 
+<script src="js/jquery.jcarousel.min.js"></script> 
+<script src="js/jquery.cycle.all.min.js"></script> 
+<script src="js/jquery.isotope.min.js"></script> 
+<script src="js/mediaelement-and-player.min.js"></script> 
+<!--Gmap-->
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<script src="js/jquery.gmap.min.js"></script> 
+<!--Custom-->
+<script src="js/custom.js"></script> 
+<!--Scroll-->
+<script type="text/javascript" src="js/scroll/jquery.ui.touch-punch.min.js"></script> 
+<script type="text/javascript" src="js/scroll/facescroll.js"></script> 
+<!--<![endif]--> 
+<!--CLabel--> 
+<script type="text/javascript" src="js/clabel/jquery.clabel.min.js"></script> 
+<!--Events-->
+<script type="text/javascript" src="js/events.js"></script> 
+<!--Create Events-->
+<script type="text/javascript" src="js/createEvents.js"></script> 
+<!--Time picker -->
+<script type="text/javascript" src="js/ui/jquery-ui-timepicker.js"></script> 
+<!--Pretty Photo-->
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<!--JQZoom-->
+<script type='text/javascript' src='js/jquery.jqzoom-core.js'></script>
+<script>
+$(document).ready(function(){
+
+	if (navigator.userAgent.indexOf("Safari") > -1) {
+
+			$('.man').addClass("safari-man");
+			$('.man').removeClass("man");
+	    }
+});
+
+</script>
+</body>
+</html>

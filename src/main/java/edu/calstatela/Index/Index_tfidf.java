@@ -4,16 +4,21 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.Vector;
 
 import org.apache.tika.exception.TikaException;
@@ -26,6 +31,8 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
+
+
 
 public class Index_tfidf {
 	public static HashMap<String, Double> TermFrequencyWholeCorpus = new HashMap<String, Double>();
@@ -218,10 +225,12 @@ public class Index_tfidf {
 
 			  public static HashMap<Integer, Double> docScores = new HashMap<Integer, Double>();
 			  public static HashMap<Integer, HashMap<String, Double>> DocWiseTermFrequency = new HashMap<Integer, HashMap<String, Double>>();
-
+			  public static List<String> words  = new ArrayList<String>();
+			  
+			  
 			  @SuppressWarnings("unchecked")
 			public static void computeTF2() throws IOException, SAXException, TikaException{
-
+				  FileWriter writer = new FileWriter("C:/Users/Ami/CS454_workspace/CS454-SearchEngine/MyFile.txt", true);
 			  for(int i=0;i<docs.size();i++){
 			  String page=docs.get(i).toLowerCase();
 			  String terms[]=page.split("[^a-zA-Z0-9]+");
@@ -247,6 +256,12 @@ public class Index_tfidf {
 			  HashMap<String, Double> termInner = new HashMap<String, Double>();
 			  if(DocWiseTermFrequency.get(i)!=null)
 			  termInner = DocWiseTermFrequency.get(i);
+			  
+			  //words.add(terms[j]);
+			  writer.write(terms[j]);
+	            writer.write("\r\n");  
+			 
+			
 			  termInner.put(terms[j], val2);
 			  DocWiseTermFrequency.put(i, termInner);
 
@@ -272,20 +287,20 @@ public class Index_tfidf {
 	            		  
 	            		  BodyContentHandler handler = new BodyContentHandler();
 	        		      Metadata metadata = new Metadata();
-	        		      FileInputStream inputstream = new FileInputStream( "C:/Users/Ami/CS454_workspace/CS454-SearchEngine/testing/"+docsWithUrl.get((int)m.getKey()));
-	        		      ParseContext pcontext = new ParseContext();
+	        		      FileInputStream inputstream = new FileInputStream( "C:/Users/Ami/CS454_workspace/CS454-SearchEngine/Storage/"+docsWithUrl.get((int)m.getKey()));
+		        		         ParseContext pcontext = new ParseContext();
 	        		      AutoDetectParser  msofficeparser = new AutoDetectParser(); 
 	        		      msofficeparser.parse(inputstream, handler, metadata,pcontext);
 	            		  
 	            		  
-	    				  obj.put("a", metadata.get("og:url"));
-	    				  obj.put("link", docsWithUrl.get((int)m.getKey()));
+	    				  obj.put("link", metadata.get("og:url"));
+	    				  obj.put("path", docsWithUrl.get((int)m.getKey()));
 	    				  obj.put("words", m.getValue());
 	    			// System.out.println(m.getKey()+"-"+m.getValue());
 	    			  
 	            	ObjectMapper mapper = new ObjectMapper();
 	               file2.write(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
-	          System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
+	         // System.out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj));
 	                file2.newLine();
 	            	  }
 	            } catch (IOException e) {
@@ -294,6 +309,7 @@ public class Index_tfidf {
 	            } finally {
 	                file2.flush();
 	                file2.close();
+	                writer.close();
 	            }
 			  
 			  
@@ -301,13 +317,18 @@ public class Index_tfidf {
 			  System.out.println(TermFrequencyDocWise);
 			  System.out.println(DocWiseTermFrequency);*/
 			  }
+			
 			  
 			    public static void main(String[] args) throws IOException, SAXException, TikaException{
-			    	readDocs("C:/Users/Ami/CS454_workspace/CS454-SearchEngine/testing");
+			    	readDocs("C:/Users/Ami/CS454_workspace/CS454-SearchEngine/Storage");
 			    	//computeFrequency();
 			    	/*computeMatrix();
 			    	printMatrix();*/
 			    	computeTF2();
+			    	/*for(String s : words){
+			    		System.out.println(s);
+			    	}*/
+			    	
 			    }
 	
 

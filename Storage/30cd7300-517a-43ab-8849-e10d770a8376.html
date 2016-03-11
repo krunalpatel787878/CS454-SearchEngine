@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CSUMentor - Home</title>
+	<meta name="viewport" content="width=device-width" />
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="description" content="CSUMentor is a website designed to help students and their families learn about the California State University (CSU) system." />
+	<meta name="keywords" content="california state university, apply online, education, college, university, admissions" />
+	
+
+	<script src="/Shared_files/js/jquery.min.js"></script>
+	<script src="/applications/shared/app_template/browser-detect.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/Shared_Files/StyleSheets/style.min.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/Shared_Files/StyleSheets/print.min.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" />
+
+
+	<script language="JavaScript">
+		function new_window() { 
+			index = window.open('','index','toolbar=no,location=no,directories=no,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=520,height=380');
+		}
+		
+		function pdf_window(page) {
+			window.open(page,'submitindex','toolbar=no,location=no,directories=no,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=700,height=500');
+		}
+		
+		function tutorial_window() { 
+			index = window.open('', 'tutorial_window', 'toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=no,width=900,height=610');
+		}
+
+		$(document).ready(function(){
+
+
+			// tablet and mobile menu button
+		    $("#nav-button").click(function(){
+		        $top_nav = $('#headerContent');
+		        if($top_nav.is(':hidden')){
+		            $top_nav.slideDown(600);
+		        }else{
+		            $top_nav.slideUp(600);
+		        }
+		    });
+
+			
+			    // homepage - position welcome message and background
+			    var mainImg_w = $('#imageSlideshowHolder').width();
+			    var mainImg_h = $('#imageSlideshowHolder').height();
+			    $('#imageSlideshowHolder').css('height', (mainImg_w/2.045));
+			    $('#hmpgMessage').css('width', (mainImg_w*.9));
+			    $('#hmpgMessage').css('top', (mainImg_w*.3));
+			    $('#hmpgMessage_es').css('width', (mainImg_w*.9));
+			    $('#hmpgMessage_es').css('top', (mainImg_w*.3));
+
+
+				
+			    // homepage - sub-boxes all same height
+			    var win_w = $(window).width();
+			    var lowerBox_h = $('#hmpgBoxes').height();
+			    var planBox_h = $('#planBox').height();
+
+			    if (win_w < 641) {
+					$('#applyBox').css('height', planBox_h);
+					$('#exploreBox').css('height', planBox_h);
+				} else {
+					$('#applyBox').css('height', lowerBox_h);
+					$('#exploreBox').css('height', lowerBox_h);
+				}
+			
+		});
+	</script>
+	
+</head>
+<script language="javascript">
+function popupwin(file) {
+	popwin = window.open("/shared_files/template/popupwin_blank.html?file=" + file,"popwin","menubar=no,directories=no,personalbar=no,resizable=no,scrollbars=yes,status=no,toolbar=no,width=400,height=450");
+	popwin.focus();
+}
+function emailwin(file) {
+	popwin = window.open(file,"popwin","menubar=no,directories=no,personalbar=no,resizable=no,scrollbars=yes,status=no,toolbar=no,width=400,height=450");
+	popwin.focus();
+}
+</script>
+
+
+<NOSCRIPT>
+This section requires JavaScript to complete. Please enable JavaScript in your browser preferences.
+</NOSCRIPT> 
+<body >
+
+<a name="top"></a>
+
+<div id="browserCheck"></div>
+
+<!-- BEGIN - SITE -->
+<div id="site">
+<div id="headerBar">
+	CSU - The California State University
+</div>
+
+<a href="#skipNavigation" class="invisible2">Skip Navigation</a>
+
+<div id="header">
+	<h1>CSUMentor</h1>
+</div>
+
+<div class="clear"></div>
+
+<span id="nav-button" class="fa fa-bars"></span>
+
+<div id="headerContent">
+	<ul id="mainNav">
+		<li id="home" class="selected"><a href="/" class="mainNavOn">Home</a></li>
+		<li id="select" ><a href="/Select/" >Explore Campuses</a>
+			
+		</li>
+		<li id="planning" ><a href="/Planning/" >College Planning</a>
+			
+		</li>
+		<li id="finaid" ><a href="/FinAid/" >Financial Aid</a>
+			
+		</li>
+		<li id="testing" ><a href="/Testing/" >Testing</a></li>
+		<li id="apply" ><a href="/AdmissionApp/" >Apply</a>
+			
+		</li>
+		<li id="help" ><a href="/Expert/" >Help</a>
+			
+		</li>
+	</ul>
+	<ul id="topNavLinks">
+		<li><a href="/shared_functions/change_language.asp?csu_language=s&nextpage=%2FDefault%2Easp">En Espanol</a></li><li><a href="/newuser.asp?nextpage=%2Flogon%2Easp%3Fnextpage%3D%2F">Create An Account</a></li>
+		<li><a href="/logon.asp?nextpage=%2FDefault%2Easp">Log On</a></li>
+		<li><a href="/AboutMentor/counselor_educator/">Counselors &amp; Educators</a></li>
+		<li id="about"><a href="/AboutMentor/" >About</a>
+			
+		</li>
+	</ul>
+
+	<div id="topNav">
+		<form method=GET action="http://google.calstate.edu/search" id="search" name="formSearch">
+		    <input type=hidden name="access" value="p" />
+			<input type=hidden name="site" value="csumentor" />
+			<input type=hidden name="output" value="xml_no_dtd" />
+			<input type=hidden name="client" value="csumentor" />
+			<input type=hidden name="sort" Value="date%3AD%3AL%3Ad1" />
+			<input type=hidden name="proxystylesheet" value="csumentor" />
+			<input type=hidden name="oe" value="UTF-8" />
+			<label for="q">Search:</label> <input type=text id=q name=q size=16 maxlength=255 value="" />
+			<a href="javascript:document.formSearch.submit();" class="submitLink" title="Search CSUMentor">Search CSUMentor</a>
+		</form>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<a name="skipNavigation"></a>
+<div class="clear"></div>
+<div class="siteContent">
+<script type="text/javascript" src="/shared_functions/image-slideshow-4.min.js"></script>
+<div id="imageSlideshowHolder">
+	
+		<img src="/images/homepage/main_img1.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img2.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img3.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img4.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img5.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img6.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img7.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img8.jpg" alt="California State University students" />
+	
+		<img src="/images/homepage/main_img9.jpg" alt="California State University students" />
+	
+		<div id="hmpgMessage">
+			<h2>College Affordability</h2>
+			<p><a href="/finaid/steps">Learn more</a> about the financial aid process and the types of aid available to CSU students.</p>
+		</div>
+	
+</div>
+<div class="container-fluid">
+	<div id="hmpgBoxes" class="row">
+		<div id="exploreBox" class="col-xs-12 col-sm-4">
+			
+				<h3>Explore</h3>
+				<ul>
+					<li><a href="/campustour/">Learn more about a CSU campus</a></li>
+					<li><a href="/select/">Compare campuses</a></li>
+					<li><a href="http://degrees.calstate.edu" target="_blank">Search CSU degrees and majors</a></li>
+					<li><a href="http://www.adegreewithaguarantee.com/" target="_blank">Learn about the Associate Degree<br>for Transfer</a></li>
+				</ul>
+			
+		</div>
+		<div id="planBox" class="col-xs-12 col-sm-4">
+			
+				<h3>Plan</h3>
+				<ul>
+					<li><a href="/planning/">Admission requirements</a></li>
+					<li><a href="/finaid/steps/">Financial aid options</a></li>
+					<li><a href="/logon.asp?nextpage=%2fGateway%2fGateway.aspx%3fcommand%3dxferoutdirect%26targetUrl%3dhttp%253a%252f%252fwww.csuenglishsuccess.org%252fgateway%253ftargeturl%3d%2feap_results%3FpageCache%3Drefresh">Find out your Early Assessment Program (EAP) results</a></li>
+					<li><a href="http://calstate.edu/transfer/adt-search/search.shtml" target="_blank">Search transfer degrees from community colleges to CSU Campuses</a></li>
+				</ul>
+			
+		</div>
+		<div id="applyBox" class="col-xs-12 col-sm-4">
+			
+				<h3>Apply</h3>
+				<ul>
+					<li><a href="/admissionapp/">Apply today</a></li>
+					<li><a href="/filing_status/">Is your campus still accepting applications?</a></li>
+				</ul>
+			
+		</div>		
+	</div>
+	<div class="clear"></div>
+</div>
+<script type="text/javascript">
+    initImageGallery('imageSlideshowHolder');
+</script>
+
+
+	<!-- END - row -->
+	
+
+	<!-- END - siteContent -->
+	</div>
+	
+	<div id="footerNav">
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/Select">Explore Campuses</a></li>
+			<li><a href="/Planning">College Planning</a></li>
+			<li><a href="/FinAid">Financial Aid</a></li>
+			<li><a href="/Testing">Testing</a></li>
+			<li><a href="/AdmissionApp">Apply</a></li>
+			<li><a href="/Expert">Help</a></li>
+			<li><a href="/AboutMentor">About</a></li>
+		</ul>
+	</div>
+	
+	<div id="footerCopy">
+		
+
+Copyright &copy; 1997-2016 <a href="http://www.xap.com" target="new">XAP Corporation</a>. All rights reserved.  XAP and Mentor are registered trademarks of  <a href="http://www.xap.com" target="new">XAP Corporation</a>. Reg. U.S. Pat. & TM Off. Use of this website constitutes acceptance of the XAP <a href="/terms.asp">Terms of Use</a> and <a href="/privacy.asp">Privacy Policy</a>.
+
+<!-- BEGIN ANALYTICS -->
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-3624566-17");
+	pageTracker._setDomainName("csumentor.org");
+	pageTracker._setLocalRemoteServerMode();
+	pageTracker._trackPageview();
+	pageTracker._trackPageLoadTime();
+
+	function recordOutboundLink(link, category, action) {
+		try {
+			var pageTracker=_gat._getTracker("UA-3624566-17");
+			pageTracker._trackEvent(category, action);
+			setTimeout('document.location = "' + link.href + '"', 100)
+		}catch(err){}
+	}
+</script>
+
+<!-- END ANALYTICS -->
+
+	</div>
+
+
+	<!-- BEGIN ANALYTICS -->
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-3624566-17");
+	pageTracker._setDomainName("csumentor.org");
+	pageTracker._setLocalRemoteServerMode();
+	pageTracker._trackPageview();
+	pageTracker._trackPageLoadTime();
+
+	function recordOutboundLink(link, category, action) {
+		try {
+			var pageTracker=_gat._getTracker("UA-3624566-17");
+			pageTracker._trackEvent(category, action);
+			setTimeout('document.location = "' + link.href + '"', 100)
+		}catch(err){}
+	}
+</script>
+
+<!-- END ANALYTICS -->
+
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- END - SITE -->
+</div>
+
+</body>
+</html>

@@ -29,5 +29,6 @@
 	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/lucene-core-3.0.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/tika-app-1.11.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ami/workspace/jstl-1.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

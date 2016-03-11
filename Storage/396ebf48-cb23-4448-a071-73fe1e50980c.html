@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+<title>Golden Eagle Territory</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="language" content="en-us">
+<meta name="author" content="CalState LA">
+<link href="https://webdb.calstatela.edu/getnotice/iframe.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+body {padding:0;margin:0;background-color:#EEE}
+img {border:none}
+a:link, a:visited {color:#00E}
+#banner {height:80px;background-color:#ffd402}
+#left-column {float:left;width:20%;padding-left:10px;vertical-align:top;padding-top:20px}
+#center-column {float:left;width:38%;padding-left:10px;vertical-align:top;padding-top:20px}
+#right-column {float:left;width:38%;padding-left:10px;vertical-align:top;padding-top:20px}
+#right-column ul {margin-top:3px; margin-bottom:6px;}
+#right-column li {margin-top:3px; margin-bottom:3px;}
+.header {height:80px;float:left;background:#ffd402 no-repeat left top;}
+.header2 {height:80px;float:right;background:#ffd402 no-repeat right top;}
+.topmenu {background:#333;height:20px;padding-top:3px;text-align:right;}
+.topmenu a {font-family:arial;color:white;text-decoration:none;padding:3px 30px;border-left:1px solid #444;}
+.topmenu a:hover {color:#FF9; background-color:#000;}
+.box {border:2px solid #c0c0c0;background-color:#FFF;width:97%;box-shadow: 6px 6px 6px #CCC;border-radius:4px;}
+.box h1 {background:#c0c0c0;font-size:1.20em;padding-top:1px;height:23px;padding-left:3px;margin:0;}
+.box h2 {font-size:1.10em;}
+.box div {padding:0 5px}
+.menu {list-style:none; padding-left:0;}
+.menu a {font-family:arial;display:block; padding:2px;}
+.skipper {position:absolute; top:0; left:0; text-indent:-2000px}
+.skipper:hover, 
+.skipper:active,
+.skipper:focus {text-indent:0px; background-color:#FFFFCC}
+.box_media {border:none;width:97%;padding:5px;margin:0;font-size:1em;}
+.clearfloats {clear:both}
+</style>
+
+<script type="text/javascript">AC_FL_RunContent = 0;</script>
+<script src="js/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript">
+function GetXmlhttpObject()
+{
+    var xmlHttp=null;
+    
+    try
+    {
+        // Firefox, Opera 8.0+, Safari
+        xmlHttp = new XMLHttpRequest();
+    }catch(e)
+    {
+        // Internet Explorer
+        try
+        {
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }catch(e)
+        {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    
+    }
+    
+    return xmlHttp;
+}
+
+function call_flash_ajax(id, url)
+{
+
+		 var xmlHttp_flash = GetXmlhttpObject();
+		 
+		 if(xmlHttp_flash==null)
+		 {
+	        document.getElementById(id).innerHTML = "<p><b>Your browser does not support AJAX</b></p>";
+	        return;
+	     }
+	             	         
+	     xmlHttp_flash.onreadystatechange = function()
+		 {
+		    if(xmlHttp_flash.readyState==4)
+		    {	       	      			    
+		      	document.getElementById(id).innerHTML =  xmlHttp_flash.responseText;		      			      							      		      
+		    }else{
+		      	//alert('error.');
+		    }
+		 };
+	
+	     xmlHttp_flash.open("GET",url, true);
+		 xmlHttp_flash.send(null);    
+}
+
+function showvideo(event, id, filename)
+{
+//	pos_x = event.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+//	pos_y = event.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+
+
+	document.getElementById(id).style.visibility = "visible";
+	document.getElementById(id).style.zIndex = 20;
+	document.getElementById(id).style.left = 250;
+	document.getElementById(id).style.top =150;	
+	call_flash_ajax("flash1", filename);
+	
+}
+
+function hidevideo(id)
+{
+	// alert("debug");
+	document.getElementById(id).style.visibility = "hidden";
+	call_flash_ajax("flash1", "player_off.htm");
+	
+}
+</script>
+</head>
+
+<body >
+<div><a href="#maincontent" class="skipper">Skip to the content</a></div>
+
+<div id="banner">
+  <div class="header"><a href="http://www.calstatela.edu" title="Cal State L.A. Home Page"><img src="files/preferredLogo.png" alt="Cal State L.A."></a></div>
+  <div class="header2"><img src="files/CLA_PORTAL_RIGHT_ENG_1.JPG" alt="Golden Eagle Territory"></div>
+</div>
+<div class="topmenu">
+  <a href="https://cmsweb.calstatela.edu/HLAPRD/signon.html" target="_blank">Eagle i-View Sign In</a><a href="https://id.calstatela.edu" target="_blank">myCSULA Identity</a><a href="https://my.calstatela.edu" target="_blank">MyCalStateLA Portal</a>
+</div>
+
+<div id="left-column">
+	<div class="box">
+		<h1>Guest Menu</h1>
+		<div>
+          <ul class="menu">
+		   <li><a target="_blank" href="http://www.csumentor.edu">Apply For Admission</a></li>
+		   <li><a target="_blank" href="http://www.fafsa.ed.gov">Apply For Financial Aid</a></li>
+           <li><a target="_blank" href="http://www.calstatela.edu/univ/housing/signup.php#application">Apply For Housing</a></li>
+		   <li><a target="_blank" href="http://www.csac.ca.gov/dream_act.asp">AB 540 Information</a></li>
+		   <li><a target="_blank" href="http://www.calstatela.edu/calendar">Campus Events</a></li>
+		   <li><a target="_blank" href="https://commerce.cashnet.com/csulapay">Credit Card Payment</a></li>
+		   <li><a target="_blank" href="http://www.calstate.edu/budgetcentral">CSU Fee Increase</a></li>
+		   <li><a target="_blank" href="http://www.calstatela.edu/univ/finaid/disb_info.php">Fin Aid Disbursement Info</a></li>
+           <li><a target="_blank" href="https://www.facebook.com/CalStateLA">Follow Us on Facebook</a></li>
+           <li><a target="_blank" href="http://www.calstate.edu/concurrent">CourseMatch</a></li>
+		   <li><a href="Useful_Links.htm">Other Useful Links</a></li>
+		   <li><a target="_blank" href="http://www.calstatela.edu/classschedule/">Printed Class Schedule</a></li>
+		   <li><a target="_blank" href="http://www.calstatela.edu/univ/police/parking.php">Parking Information/Purchase a Permit</a></li>
+		   <li><a target="_blank" href="http://www.calstatela.edu/academic/aa/semester/">Quarter to Semester Conversion</a></li>
+             <li><a target="_blank" href="https://cmsweb.calstatela.edu/psc/HLAPRDF/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.CLASS_SEARCH.GBL?PORTALPARAM_PTCNAV=HC_CLASS_SEARCH&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=CO_EMPLOYEE_SELF_SERVICE&EOPP.SCLabel=Self%20Service&EOPP.SCPTfname=CO_EMPLOYEE_SELF_SERVICE&FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HCCC_ENROLLMENT.HC_CLASS_SEARCH&IsFolder=false">Schedule Of Classes</a></li>
+		   <li><a target="_blank" href="https://mymail.calstatela.edu/">Student E-Mail</a></li>
+           <li><a target="_blank" href="http://www.calstatela.edu/main/student.htm">Student Forms</a></li>
+           <li><a target="_blank" href="https://www.credentials-inc.com/tplus/?ALUMTRO001140">Transcripts - Order Online</a></li>
+		   <li><a target="_blank" href="http://www.calstatela.edu/catalog">University Catalog</a></li>
+		   <li><a target="_blank" href="http://calstatelausu.org/">University Student Union</a></li>
+           <li><a target="_blank" href="http://www.calstatela.edu/centers/testctr/">University Testing Center</a></li>
+           <li><a target="_blank" href="waitlist.pdf">Wait List<img src="https://web.calstatela.edu/images/web/pdficon.gif" alt="pdf icon"></a></li>
+          </ul>
+        </div>
+    </div>
+    <br />
+    <div class="box">
+        <h1>About GET</h1>
+        <div>
+		<p>GET information on Registrar quarterly deadline and registration dates, viewing registration appointments, 
+        grade availability and much <a title="Registrar news" href="Registrar.htm">more</a>.</p>
+		<p><span class="menu"><a href="GETLogin.htm">GET Login Instructions</a></span>
+		<span class="menu"><a href="canGETdo.htm" >What Can GET Do For Me?</a></span>
+		<span class="menu"><a href="GETHelp.htm">GET Help</a></span></p>
+        <br />
+        </div>
+    </div>
+    <div class="box_media"> 
+        <p><strong>Follow Cal State LA</strong> <a href="https://www.facebook.com/CalStateLA" target="_blank"><img src="logoFacebook.jpg" alt="Facebook" style="vertical-align:middle;border:none" /></a></p>
+        <p><a href="http://www.adobe.com/go/getreader"> <img src="http://www.calstatela.edu/images/web/get_adobe_reader.gif" style="border:none" alt="Download Adobe Reader"><span style="display:none">Download Adobe Reader</span></a></p>
+    </div>
+</div>        
+
+<div id="center-column">
+<!--	<div class="box" >
+		<h1><a name="maincontent"></a>President&#39;s Message</h1>
+		<div>
+        <p><img height="114" width="149" alt="Dr. Rosser" src="files/dr_rosser.jpg" align="right" style="margin: 0 10px"><span style="font-size:1.1em">Welcome!</span></p>
+		<p>California State University, Los Angeles strives to ensure a competitive edge 
+		by incorporating state-of-the-art technology in the educational process. This 
+		includes technology, that affords us...<a href="Welcome.htm">continue</a>.</p>
+		<br>
+		</div>
+	</div>
+    <br>-->
+
+    <div class="box" >
+		<h1><a name="maincontent"></a>Important Message</h1>
+        <div>
+        <p>The CSU Data Center / CMS Central has informed all the CSU campuses that the newest versions of Microsoft Internet Explorer (IE9) and Mozilla Firefox (Firefox 4) that were recently released have compatibility issues that will impact grading and other PeopleSoft functionality. If you have upgraded to one of these new browser versions, you may experience slow response times, access problems, or loss of functionality with GET, GETLA, and PeopleSoft Financials. </p>
+        <p>If you experience any of these problems, you can use a different browser, revert back to your previous    browser version, or run compatibility view (for IE9 only): </p>
+        <ul>
+            <li>Use Compatibility View in IE9 (<a href="http://windows.microsoft.com/en-US/windows7/How-to-use-Compatibility-View-in-Internet-Explorer-9">http://windows.microsoft.com/en-US/windows7/How-to-use-Compatibility-View-in-Internet-Explorer-9</a>). </li>
+            <li>Uninstall IE9 and revert to your previous version of Internet Explorer (<a href="http://windows.microsoft.com/en-US/windows7/how-do-i-install-or-uninstall-internet-explorer-9">http://windows.microsoft.com/en-US/windows7/how-do-i-install-or-uninstall-internet-explorer-9</a>) </li>
+            <li>Uninstall Firefox 4 and re-install Firefox 3.6 (<a href="http://www.mozilla.com/en-US/firefox/all-older.html">http://www.mozilla.com/en-US/firefox/all-older.html</a>) </li>
+            <li>Download and install Google Chrome (<a href="http://www.google.com/chrome">http://www.google.com/chrome</a>)    or Safari (<a href="http://www.apple.com/safari/">http://www.apple.com/safari/</a>) </li>
+        </ul>
+        <p>Please contact the ITS Help Desk with any technical questions at 323-343-6170 or email at <a href="mailto:helpdesk@calstatela.edu">helpdesk@calstatela.edu</a> or visit LIB PW Lobby. </p>
+        </div>
+        <br>
+	</div>
+</div>
+
+
+<div id="right-column">
+	<div class="box">
+		<h1>Announcements</h1>
+		<div>
+          <p><strong class="getnotice" >Announcements: </strong></p>
+          <p><strong class="getnotice" style="color:red;">NEW </strong><strong class="getnotice">- <em>Videos</em> to help you use GET.</strong></p>
+          <p> <a onclick="showvideo(event, 'video1', '/tutorial/tutorial1.htm')" style="cursor: pointer; color:#0000ff; text-decoration:underline">How to Login to GET</a></p>
+          <p><a onclick="showvideo(event, 'video1', 'tutorial/tutorial2.htm')" style="cursor: pointer;color:#0000ff; text-decoration:underline">How to Prepare for Registration</a> </p>
+          <p><a onclick="showvideo(event, 'video1', '/tutorial/tutorial3.htm')" style="cursor: pointer;color:#0000ff; text-decoration:underline">How to Add, Drop and Swap Classes</a> </p>
+          <p><a onclick="showvideo(event, 'video1', '/tutorial/CAARreport.htm')" style="cursor: pointer;color:#0000ff; text-decoration:underline">How to Run a CAAR Report </a></p>
+          <p style="font-size:.8em">(CAAR is your Campus Academic Advisement Report) </p>
+          <br>
+          <p>Please note: Adobe Flash Player is required for the videos. <a href="http://get.adobe.com/flashplayer/" target="_blank">Get Adobe Flash Player</a>.</p>
+		</div>
+
+		<div>
+			<iframe src="https://webdb.calstatela.edu/getnotice/include.html" title="Announcements" frameborder="0" class="getframe">GET Announcements</iframe>	
+		</div>     		
+	</div>
+	<br>
+	
+	<div id="video1" style="position:absolute; visibility:hidden; border:4px solid #444; background-color:#FFF; left:30px; top:30px; width:680px; height:550px">
+		<div style="background-color:#444; height:32px"><a onclick="hidevideo('video1')" onmouseover="document.close_figure2.src='../files/close_over.png';" onmouseout="document.close_figure2.src='../files/close.png';">
+		<img name="close_figure2" alt="Close video" class="imglink" border="0" src="../files/close.png" align="right"></a></div>
+		<div id="flash1"></div>
+	</div>
+</div>
+
+<br class="clearfloats">
+
+</body>
+</html>
