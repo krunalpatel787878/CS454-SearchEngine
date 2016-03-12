@@ -23,32 +23,32 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/json-simple-1.1.1.jar">
+	<classpathentry kind="lib" path="C:/Users/Ami/workspace/NavCam/lib/json-simple-1.1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/jackson-all-1.9.0.jar">
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/jackson-all-1.9.0.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/commons-csv-1.2-bin/commons-csv-1.2/commons-csv-1.2.jar">
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/commons-cli-2.0.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/lucene-core-3.0.3.jar">
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/lucene-core-3.0.3.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/tika-app-1.11.jar">
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/tika-app-1.11.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Vrushank/Downloads/Library/javax.servlet.jar">
+	<classpathentry kind="lib" path="C:/Users/Ami/Downloads/javax.servlet.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

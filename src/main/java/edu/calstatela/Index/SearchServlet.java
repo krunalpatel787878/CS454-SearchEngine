@@ -20,55 +20,48 @@ import org.apache.tika.exception.TikaException;
 import org.xml.sax.SAXException;
 
 
-/**
- * Servlet implementation class SearchServlet
- */
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+ 
     public SearchServlet() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
-		IndexMain im = new IndexMain();
+		
+		/*IndexMain im = new IndexMain();
 		im.createIndex();
 		
-		/*Index_tfidf i_tfidf = new Index_tfidf();
+		Index_tfidf i_tfidf = new Index_tfidf();
 		i_tfidf.readDocs(IndexConstants.dataDir);    	
 		try {
 			i_tfidf.computeTF2();
 		} catch (SAXException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		} catch (TikaException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
-		}*/
-		
+		}
+		*/
 		Ranking r = new Ranking();
 		try {
-			r.startRank("D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\Control.json");
+			r.startRank("C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\Control.json");
 		} catch (org.json.simple.parser.ParseException e1) {
-			// TODO Auto-generated catch block
+
 			e1.printStackTrace();
 		}
 		List<String> c = new ArrayList<String>();
-		String file = "D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\MyFile.txt";
+		String file = "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt";
 		BufferedReader buf = null;
 		try {
 			buf = new BufferedReader(new FileReader(file));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		String text = null;
@@ -93,11 +86,8 @@ public class SearchServlet extends HttpServlet {
 		request.getRequestDispatcher("/Search.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
 String q = request.getParameter("search");
 		
@@ -130,13 +120,13 @@ String q = request.getParameter("search");
 			try {
 				r = SearchMain.sortUsingRelevance(query);
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			} catch (SAXException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			} catch (TikaException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 		} else {
@@ -145,37 +135,37 @@ String q = request.getParameter("search");
 				try {
 					r = SearchMain.searchByBoolean(token[0].trim(),token[1].trim(),"1");
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				} catch (SAXException e) {
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				} catch (TikaException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 			} else {
 				try {
 					r = SearchMain.searchByBoolean(token[0].trim(), token[1].trim(), "0");
 				} catch (ParseException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				} catch (SAXException e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				} catch (TikaException e) {
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				}
 			}
 		}
 		List<String> c = new ArrayList<String>();
-		String file = "D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\MyFile.txt";
+		String file = "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt";
 		BufferedReader buf = null;
 		try {
 			buf = new BufferedReader(new FileReader(file));
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		String text = null;

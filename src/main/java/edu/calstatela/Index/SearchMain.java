@@ -33,7 +33,7 @@ public class SearchMain {
 	   Indexer indexer;
 	   static Search searchLink;
 
-	   public static void main(String[] args) throws SAXException, TikaException {
+	 /*  public static void main(String[] args) throws SAXException, TikaException {
 		      SearchMain searchData;
 		      try {
 		    	  searchData = new SearchMain();
@@ -49,7 +49,7 @@ public class SearchMain {
 		          e.printStackTrace();
 		      }		
 		   }
-	   
+	   */
 		@SuppressWarnings("unused")
 		public static List<ShowSearchResultBean> searchByBoolean(String searchQuery1,
 				String searchQuery2,String value) throws IOException,

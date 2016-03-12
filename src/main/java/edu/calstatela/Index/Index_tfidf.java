@@ -230,7 +230,7 @@ public class Index_tfidf {
 			  
 			  @SuppressWarnings("unchecked")
 			public static void computeTF2() throws IOException, SAXException, TikaException{
-				  FileWriter writer = new FileWriter("D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\MyFile.txt", true);
+				  FileWriter writer = new FileWriter("C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt", true);
 			  for(int i=0;i<docs.size();i++){
 			  String page=docs.get(i).toLowerCase();
 			  String terms[]=page.split("[^a-zA-Z0-9]+");
@@ -271,7 +271,7 @@ public class Index_tfidf {
 			  Iterator it =DocWiseTermFrequency.entrySet().iterator();
 			
 			  
-			  File f2 = new File("f1.json");
+			  File f2 = new File("C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\f1.json");
 	          BufferedWriter file2 = null;
 			try {
 				file2 = new BufferedWriter(new FileWriter(f2,true));
@@ -287,7 +287,7 @@ public class Index_tfidf {
 	            		  
 	            		  BodyContentHandler handler = new BodyContentHandler();
 	        		      Metadata metadata = new Metadata();
-	        		      FileInputStream inputstream = new FileInputStream( "D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\Storage\\"+docsWithUrl.get((int)m.getKey()));
+	        		      FileInputStream inputstream = new FileInputStream( "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\Storage\\"+docsWithUrl.get((int)m.getKey()));
 		        		         ParseContext pcontext = new ParseContext();
 	        		      AutoDetectParser  msofficeparser = new AutoDetectParser(); 
 	        		      msofficeparser.parse(inputstream, handler, metadata,pcontext);
@@ -312,24 +312,18 @@ public class Index_tfidf {
 	                writer.close();
 	            }
 			  
-			  
-			 /* System.out.println(TermFrequencyWholeCorpus);
-			  System.out.println(TermFrequencyDocWise);
-			  System.out.println(DocWiseTermFrequency);*/
+
 			  }
 			
 			  
-			    public static void main(String[] args) throws IOException, SAXException, TikaException{
+			  /*  public static void main(String[] args) throws IOException, SAXException, TikaException{
 			    	readDocs("C:/Users/Ami/CS454_workspace/CS454-SearchEngine/Storage");
 			    	//computeFrequency();
-			    	/*computeMatrix();
-			    	printMatrix();*/
+			    	computeMatrix();
+			    	printMatrix();
 			    	computeTF2();
-			    	/*for(String s : words){
-			    		System.out.println(s);
-			    	}*/
 			    	
-			    }
+			    }*/
 	
 
 }

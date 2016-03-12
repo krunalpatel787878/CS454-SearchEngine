@@ -32,10 +32,7 @@ public class Index {
 public static void index(String c, String stw, String index, String rank) throws IOException{
 		
 
-		/* File f = new File("D:/Storage"); // current directory
-
-		   File[] files = f.listFiles();
-		    for (File file : files) {*/			ArrayList<String> ranking = new ArrayList<String>();
+			ArrayList<String> ranking = new ArrayList<String>();
 			final InputStream in = new FileInputStream(c);
 			 
 			try {
@@ -87,10 +84,6 @@ public static void index(String c, String stw, String index, String rank) throws
 		    	        	{
 		    	        	ranking.add(str);
 		    	            }
-		    	        	
-		    	        	
-		    	        	
-		    	        	
 		    	        	
 		    	        	ArrayList<String> word = new ArrayList<String>();
 		    	        	FileInputStream fstream = new FileInputStream(stw);
@@ -149,13 +142,10 @@ public static void index(String c, String stw, String index, String rank) throws
 					
 				}
 		    }
-				//System.out.println(ranking);
+				
 			}
 			finally {
-				//for(String wrd : ranking)
-				//{
-				//new Rank().rank("watch", rank);
-				//}
+				
 				in.close();
 			}
 	}
