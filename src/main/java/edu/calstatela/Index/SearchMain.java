@@ -107,7 +107,7 @@ public class SearchMain {
 					 * System.out.println("File: "+ metadata.get("og:url"));
 					 */
 					ShowSearchResultBean a = new ShowSearchResultBean(
-							scoreDoc.score, metadata.get("og:url"));
+							scoreDoc.score, metadata.get("og:url"), metadata.get("description"), metadata.get("title"));
 					result.add(a);
 
 				}
@@ -148,7 +148,7 @@ public class SearchMain {
 					 * System.out.println("File: "+ metadata.get("og:url"));
 					 */
 					ShowSearchResultBean a = new ShowSearchResultBean(
-							scoreDoc.score, metadata.get("og:url"));
+							scoreDoc.score, metadata.get("og:url"), metadata.get("description"), metadata.get("title"));
 					result.add(a);
 				}
 
@@ -202,7 +202,7 @@ public class SearchMain {
 				  scoreDoc.score + " "); System.out.println("File: "+
 				  metadata.get("og:url"));*/
 					  ShowSearchResultBean a = new ShowSearchResultBean(
-								scoreDoc.score, metadata.get("og:url"));
+								scoreDoc.score, metadata.get("og:url"), metadata.get("description"), metadata.get("title"));
 						result.add(a);  
 				  }
 				 

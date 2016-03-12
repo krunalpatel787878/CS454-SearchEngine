@@ -100,7 +100,7 @@ public class Ranking {
 	}
 	
 	public void saveArray() throws IOException {
-		FileWriter file = new FileWriter(".\\ranking.json", false);
+		FileWriter file = new FileWriter("D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\ranking.json", false);
 	
 		file.write(jsonObj.toJSONString());
 		file.write("\r\n");

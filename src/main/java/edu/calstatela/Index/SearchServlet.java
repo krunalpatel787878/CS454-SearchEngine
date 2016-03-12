@@ -40,8 +40,30 @@ public class SearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		IndexMain im = new IndexMain();
+		im.createIndex();
+		
+		/*Index_tfidf i_tfidf = new Index_tfidf();
+		i_tfidf.readDocs(IndexConstants.dataDir);    	
+		try {
+			i_tfidf.computeTF2();
+		} catch (SAXException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (TikaException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}*/
+		
+		Ranking r = new Ranking();
+		try {
+			r.startRank("D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\Control.json");
+		} catch (org.json.simple.parser.ParseException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		List<String> c = new ArrayList<String>();
-		String file = "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt";
+		String file = "D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\MyFile.txt";
 		BufferedReader buf = null;
 		try {
 			buf = new BufferedReader(new FileReader(file));
@@ -148,7 +170,7 @@ String q = request.getParameter("search");
 			}
 		}
 		List<String> c = new ArrayList<String>();
-		String file = "C:\\Users\\Ami\\CS454_workspace\\CS454-SearchEngine\\MyFile.txt";
+		String file = "D:\\CS454_Workspace_Github\\CS454-SearchEngine_Latest\\MyFile.txt";
 		BufferedReader buf = null;
 		try {
 			buf = new BufferedReader(new FileReader(file));

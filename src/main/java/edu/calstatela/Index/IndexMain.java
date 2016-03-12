@@ -5,7 +5,7 @@ import java.io.IOException;
 public class IndexMain {
 
 	
-	   Indexer indexer;
+	   static Indexer indexer;
 	   
 	   public static void main(String[] args) {
 		   IndexMain tester;
@@ -17,7 +17,7 @@ public class IndexMain {
 	      } 
 	   }
 
-	   private void createIndex() throws IOException{
+	   public static void createIndex() throws IOException{
 	      indexer = new Indexer(IndexConstants.indexDir);
 	      int numIndexed;
 	      long startTime = System.currentTimeMillis();	
